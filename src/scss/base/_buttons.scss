@@ -1,0 +1,96 @@
+@use "base/var" as *;
+
+.btn, .btn-outline, .btn-primary, .btn-grey {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	height: 2.6em;
+	padding: 0;
+	padding-inline: 1.5em;
+	white-space: nowrap;
+	font-size: 20px;
+	font-weight: 700;
+	color: $text;
+	border: 1px solid currentColor;
+    border-radius: 8px;
+	cursor:pointer;
+	transition: .3s;
+	column-gap:20px;
+	@media (max-width: 1699px) {
+		font-size: 16px;
+	}
+	@media (max-width: 767px) {
+	  height: 49px;
+	  font-size: 15px;
+	  
+	}
+}
+.btn:hover{color: $accent;}
+.btn.btn--white{
+	background-color: #fff;
+	border: 1px solid #fff;
+	&:hover{
+		background-color: $accent;
+	   border: 1px solid $accent;
+	   color: #fff;
+	}
+}
+
+.btn-grey{
+	height: 36px;
+	background-color: #f6f5f5;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #222;
+	&:hover{color: #fff;background-color: $accent; border: 1px solid $accent;}
+}
+.btn.btn--accent{
+	color: $accent;
+	&:hover{
+		border: 1px solid  $text;
+		background-color: #fff;
+		color:  $text;
+	}
+}
+.dark-bg .btn.btn--accent:hover{
+	border: 1px solid  #fff;
+	background-color: transparent;
+	color:  #fff;
+}
+.btn-outline{
+	color: white;
+	&:hover{color:  $accent; border: 1px solid $accent;}
+}
+.btn-primary{
+	border: 1px solid $accent;
+	background-color: $accent;
+	color: white;
+	&:hover{
+		
+		background-color: #fff;
+		color:   $accent;
+	}
+}
+.btn-square{
+	padding: 8px;
+	width: 47px;
+	height: 47px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: #fff;
+	transition: .3s; 
+	&:hover{
+		opacity: .7;
+	}
+}
+@media (max-width: 767px) {
+	.show-more-btn{
+		display: flex;
+		justify-content: center;
+	}
+}

@@ -1,0 +1,43 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Цветовая схема
+
+				.container-dashboard__content
+					ul.color-scheme
+						li
+							span.color-box(style="background-color:#FD8C09")
+							span.color-name $accent - #FD8C09;
+						li
+							span.color-box(style="background-color:#222222;")
+							span.color-name $text- #222222;						
+						
+						li
+							span.color-box(style="background-color:#464655;")
+							span.color-name $darkGrey - #464655;
+						
+						li
+							span.color-box(style="background-color:#838494;")
+							span.color-name $lightGrey - #838494;						
+						
+						li
+							span.color-box(style="background-color:#D9D9D9;")
+							span.color-name $silver - #D9D9D9;

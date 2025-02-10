@@ -1,0 +1,43 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Кнопки
+
+				.container-dashboard__content
+					.btn Перейти в каталог
+					pre.
+						.btn Перейти в каталог
+					div(style="padding: 20px; background-color: #1c1c1c;")
+						.btn-outline Перейти в каталог
+					pre.
+						.btn-outline Перейти в каталог
+					div(style="padding: 20px; background-color: #1c1c1c;")
+						.btn.btn--white Перейти в каталог
+					pre.
+						.btn.btn--white Перейти в каталог
+					
+					button.btn.btn--accent Узнать подробнее
+					pre.
+						.btn.btn--accent Узнать подробнее
+					
+					.btn-primary Узнать подробнее
+					pre.
+						.btn-primary Узнать подробнее
