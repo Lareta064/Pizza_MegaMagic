@@ -13,7 +13,7 @@ html(lang="ru")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
-	body.body-dashboard
+	body.body-dashboard(style="background-color: #e0e0e0;")
 
 		include ui-navigation.pug
 
@@ -54,33 +54,73 @@ html(lang="ru")
 					.header-content
 						button.menu-btn
 							span
-						.header-group
+						.header-right
+							//LANG DROP
 							.lang-select.dropdown
 								button.dropdown__button(type="button") RU
 								
 								.dropdown__list
 									ul
-										li.dropdown__list-item(data-value="Речной песок") RU
-										li.dropdown__list-item(data-value="Пример заполнения 2") EN
+										li.dropdown__list-item.selected(data-value="RU") Русский
+										li.dropdown__list-item(data-value="EN") English
+										li.dropdown__list-item(data-value="LV") latviski
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name="lang")
+							
+							//PROFILE BTN
+							button.btn-profile
+								img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" alt="img")
 		
-
-
+				hr
+				header.header.popup-header
+					.header-content
+						button.btn-back-dark
+							
+						.header-right
+							button.btn-favor.btn-round
+								svg.svg-favor
+									use(href='../img/sprite.svg#svg-favor')
+							
+							button.btn-share.btn-round
+								svg.svg-share
+									use(href='../img/sprite.svg#svg-share')
+				
+				hr
+				header.header.product-popup-header
+					.header-content
+						button.btn-close-dark.btn-abs
+							
+						.header-title
+							.h5 Пицца “Особая”
+							p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+				hr
+				header.header
+					.header-content.header-content--justify
+						button.btn-back-dark
+							
+						button.btn-rounde
+							svg.svg-explore
+								use(href='../img/sprite.svg#svg-explore')
+		
+		
 		script.
 			/*=====CUSTOM SELECT===== */
-			if (window.NodeList && !NodeList.prototype.forEach) {
-				NodeList.prototype.forEach = function (callback, thisArg) {
-					thisArg = thisArg || window;
-					for (var i = 0; i < this.length; i++) {
-					callback.call(thisArg, this[i], i, this);
-					}
-				};
-			}
+			
+			//- if (window.NodeList && !NodeList.prototype.forEach) {
+			//- 	NodeList.prototype.forEach = function (callback, thisArg) {
+			//- 		thisArg = thisArg || window;
+			//- 		for (var i = 0; i < this.length; i++) {
+			//- 		callback.call(thisArg, this[i], i, this);
+			//- 		}
+			//- 	};
+			//- }
 
 			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 				const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
 				const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
 				const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
 				const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+				const dropDownSelected = dropDownList.querySelector('.selected');
 
 				// Клик по кнопке. Открыть/Закрыть select
 				dropDownBtn.addEventListener('click', function (e) {
@@ -93,10 +133,12 @@ html(lang="ru")
 				dropDownListItems.forEach(function (listItem) {
 					listItem.addEventListener('click', function (e) {
 					e.stopPropagation();
-					dropDownBtn.innerText = this.innerText;
+					dropDownListItems.forEach(function (item){item.classList.remove('selected')});
+					
+					dropDownBtn.innerText = this.dataset.value;
 					dropDownBtn.focus();
 					if(dropDownInput){dropDownInput.value = this.dataset.value;}
-					
+					this.classList.add('selected')
 					dropDownList.classList.remove('dropdown__list--visible');
 					dropDownBtn.classList.remove('dropdown__button--active');
 					

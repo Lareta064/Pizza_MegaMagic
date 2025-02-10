@@ -8,7 +8,7 @@ span.chevron-icon{
 	width: 180px;
 	height: 90px;
 }
-.svg-cross, .svg-out,.svg-reload, .svg-menu,.svg-cart, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc{
+.svg-cross, .svg-out,.svg-reload, .svg-menu,.svg-cart, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc, .svg-favor, .svg-share,.svg-explore{
 	color: $p;
 	display: inline-block;
 }
@@ -16,7 +16,7 @@ span.chevron-icon{
 	width: 26px;
 	height: 26px;	
 }
-.svg-out{
+.svg-out, .svg-favor, .svg-share,.svg-explore{
 	width: 27px;
 	height: 28px;
 }

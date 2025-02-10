@@ -124,11 +124,12 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 .w-100{width:100%!important;}
-.flex, .flex-center, .header-content, .header-group{
+.flex, .flex-center, .header-content, .header-right{
 	display: flex;
 	align-items: center;
 	column-gap:12px;
 }
+
 .flex-center{
 	justify-content: center;
 }

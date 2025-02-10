@@ -1,0 +1,7 @@
+@use "base/var" as *;
+.product-popup-header{
+	.header-content{justify-content: center;text-align: center;position: relative;}
+	.header-title{
+		max-width: 250px; 
+	}
+}

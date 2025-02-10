@@ -5,9 +5,13 @@
 	padding-right: 20px;
 	padding-top: 50px;
 	padding-bottom: 20px;
-	max-width:600px;height: 124px;
+	max-width:600px;min-height: 124px;
+	background-color: #fff;
+	border-bottom: 1px solid $s1;
 	@media (max-width: 374px) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
+	.header-right{margin-left: auto;}
+	.header-content--justify{justify-content: space-between;}
 }
