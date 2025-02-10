@@ -62,11 +62,11 @@ gulp.task("pugUi", function (callback) {
     callback();
 });
 // Таск для компиляции SCSS в CSS
-// gulp.task('ttf2woff2', async function () {
-//     gulp.src(['./src/fonts/*.ttf'])
-//         .pipe(ttf2woff2())
-//         .pipe(gulp.dest('build/fonts/'));
-// });
+gulp.task('ttf2woff2', async function () {
+    gulp.src(['./src/fonts/*.ttf'])
+        .pipe(ttf2woff2())
+        .pipe(gulp.dest('build/fonts/'));
+});
 // Таск для компиляции SCSS в CSS
 gulp.task("scss", function(callback) {
     return gulp
@@ -98,34 +98,34 @@ gulp.task("scss", function(callback) {
     callback();
 });
 // Для компиляции отдельных файлов
-gulp.task("scss2", function () {
-    return gulp
-        .src("./src/scss/**/*.scss") // изменен путь для выбора всех файлов scss внутри подпапок
-        .pipe(
-            plumber({
-                errorHandler: notify.onError(function (err) {
-                    return {
-                        title: "SCSS2 - Styles",
-                        sound: false,
-                        message: err.message,
-                    };
-                })
-            })
-        )
-        .pipe(sourcemaps.init())
-        .pipe(
-            sass({
-                outputStyle: 'expanded',                
-            })
-        )
-        .pipe(
-            autoprefixer({
-                overrideBrowserslist: ["last 4 versions"]
-            })
-        )
-        .pipe(gulp.dest("./build/css"))
-        .pipe(browserSync.stream());
-});
+// gulp.task("scss2", function () {
+//     return gulp
+//         .src("./src/scss/**/*.scss") // изменен путь для выбора всех файлов scss внутри подпапок
+//         .pipe(
+//             plumber({
+//                 errorHandler: notify.onError(function (err) {
+//                     return {
+//                         title: "SCSS2 - Styles",
+//                         sound: false,
+//                         message: err.message,
+//                     };
+//                 })
+//             })
+//         )
+//         .pipe(sourcemaps.init())
+//         .pipe(
+//             sass({
+//                 outputStyle: 'expanded',                
+//             })
+//         )
+//         .pipe(
+//             autoprefixer({
+//                 overrideBrowserslist: ["last 4 versions"]
+//             })
+//         )
+//         .pipe(gulp.dest("./build/css"))
+//         .pipe(browserSync.stream());
+// });
 
 // Копирование Изображений
 gulp.task("copy:img", function(callback) {
@@ -207,7 +207,7 @@ gulp.task(
        
         gulp.parallel("clean:build"),
       
-        gulp.parallel("scss", "pug","pugUi","copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts"),
+        gulp.parallel("scss", "ttf2woff2","pug","pugUi","copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts", "ttf2woff2"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
         

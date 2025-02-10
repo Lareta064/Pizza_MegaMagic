@@ -1,5 +1,28 @@
 @use "base/var" as *;
-
+@font-face{
+	font-family: 'Cuprum';
+	src: url('../fonts/Cuprum-Redular.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Cuprum';
+	src: url('../fonts/Cuprum-Bold.woff2'), format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'RobotoCondensed';
+	src: url('../fonts/RobotoCondensed-Redular.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'RobotoCondensed';
+	src: url('../fonts/RobotoCondensed-Bold.woff2'), format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
 *, *:after, *:before {
 	box-sizing: border-box;
 	background-repeat: no-repeat;
