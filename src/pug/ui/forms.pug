@@ -23,114 +23,8 @@ html(lang="ru")
 				h2 Форма
 				.container-dashboard__content
 					
-					.select-date
-						.form-item
-							input.start-date(type='text' name="startDay")
-						.form-item
-							input.end-date(type='text' name="endtDay")
-					br
-					.select-products-form
-						.add-product-group.flex
-							.form-dropdown.dropdown
-								button.dropdown__button(type="button") Выбрать
-								
-								.dropdown__list
-									ul
-										li.dropdown__list-item(data-value="Речной песок") Речной песок
-										li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
-										li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
-										li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
-							.select-date
-								.form-item
-									input.start-date(type='text' name="startDay" )
-								.form-item
-									input.end-date(type='text' name="endtDay" )
-						button.add-product.add-product-btn
-							span.button-icon
-								svg.svg-plus
-									use(href='../img/sprite.svg#svg-plus')
-							| Добавить еще товар
-					script.
-						 const newProductHTML = `
-							<div class="add-product-group flex">
-								<div class="form-dropdown dropdown">
-								<button class="dropdown__button" type="button">Выбрать</button>
-								<div class="dropdown__list">
-									<ul>
-									<li class="dropdown__list-item" data-value="Речной песок">Речной песок</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 2">Пример заполнения 2</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 3">Пример заполнения 3</li>
-									<li class="dropdown__list-item" data-value="Пример заполнения 4">Пример заполнения 4</li>
-									</ul>
-								</div>
-								</div>
-								<div class="select-date">
-								<div class="form-item">
-									<input id="start-date" type="text" name="startDay" placeholder="c">
-								</div>
-								<div class="form-item">
-									<input id="end-date" type="text" name="endDay" placeholder="по">
-								</div>
-								</div>
-							</div>
-							`;
-
-							// Находим кнопку
-							const addButton = document.getElementById("add-product");
-
-							// Добавляем обработчик клика
-							addButton.addEventListener("click", () => {
-							// Находим контейнер
-							const container = document.getElementById("selectProductForm");
-
-							// Создаем временный элемент
-							const newBlock = document.createElement("div");
-							newBlock.innerHTML = newProductHTML;
-
-							// Вставляем перед кнопкой
-							container.insertBefore(newBlock.firstChild, addButton);
-							});
 					br
 					
-					
-					.form-item
-						input(type="text" placeholder="Адрес *")
-					pre.
-						.form-item
-							input(type="search" placeholder="Адрес *")
-					hr
-					.form-item
-						textarea(placeholder="Примечание")
-					pre.
-						.form-item
-							textarea(placeholder="Примечание")
-					br
-					.form-row
-						.form-item
-							input(type="tel" placeholder="Телефон *")
-						.form-item
-							input(type="email" placeholder="Email *")
-					p.agree-txt Подписываясь на рассылку, вы соглашаетесь с #[a(href="#!") условиями оферты] и #[a(href="#!") политикой конфиденциальности]
-					
-					pre.
-						.form-row
-							.form-item
-								input(type="tel" placeholder="Телефон *")
-							.form-item
-								input(type="email" placeholder="Email *")
-						p.agree-txt Подписываясь на рассылку, вы соглашаетесь с #[a(href="#!") условиями оферты] и #[a(href="#!") политикой конфиденциальности]
-					
-					hr
-					.form-item
-						input.light-border(type="text")
-						button.btn-send
-							img(src="../img/send.svg", alt="send")
-					pre.
-						.form-item
-							input.light-border(type="text")
-							button.btn-send
-								img(src="../img/send.svg", alt="send")
-					hr
 					+select("Речной песок", 'product_name')
 					pre.
 						+select("Речной песок", 'product_name')
@@ -148,38 +42,7 @@ html(lang="ru")
 						button.btn.search-btn(type="submit")
 							svg.svg-search
 								use(href='./img/sprite.svg#svg-search')
-					hr
-					
-		
-		script(src='https://cdn.jsdelivr.net/npm/flatpickr')
-		script(src='https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js')
-		script.
-			
-			document.querySelectorAll('.select-date').forEach((dateBlock) => {
-				// Находим внутри блока input для начальной и конечной дат
-				const startDateInput = dateBlock.querySelector('.start-date');
-				const endDateInput = dateBlock.querySelector('.end-date');
 
-				// Инициализируем Flatpickr для начальной даты
-				flatpickr(startDateInput, {
-					mode: "range", // Режим выбора диапазона
-					locale: flatpickr.l10ns.ru, // Русификация
-					dateFormat: "d.m.Y", // Формат даты
-					minDate: 'today', // Минимальная дата
-					onChange: function(selectedDates) {
-					if (selectedDates.length === 2) {
-						// Устанавливаем выбранные даты в соответствующие инпуты
-						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
-						endDateInput.value = flatpickr.formatDate(selectedDates[1], "d.m.Y");
-					} else if (selectedDates.length === 1) {
-						// Если выбрана только одна дата, очищаем конечную дату
-						startDateInput.value = flatpickr.formatDate(selectedDates[0], "d.m.Y");
-						endDateInput.value = "";
-					}
-					}
-				});
-			});
-	
 		script.
 			
 			/*=====CUSTOM SELECT===== */

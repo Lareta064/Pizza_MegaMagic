@@ -1,0 +1,116 @@
+/*custom select*/
+@use "../base/_var.scss" as *;
+.dropdown {
+	position: relative;
+  }
+  
+  .dropdown__button {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: left;
+	height: 36px;
+	border: 1px solid #e9e9e9;
+	padding-left: 12px;
+	padding-right: 30px;
+	border-radius: 7px;
+	cursor: pointer;
+	z-index: 3;
+	  color: #000;
+	  letter-spacing: -0.02em;
+	  font-size: 16px;
+	  font-weight: 700;
+  }
+  
+  .dropdown__button::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	display: block;
+	// z-index: 2;
+	
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='10' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.8844 7.61949L14.9474 0.00185977L16 1.10913L7.8844 10L0 1.10918L1.05263 0L7.8844 7.61949Z' fill='%23222222' /%3e%3c/svg%3e");
+	transition: .3s; 
+	background-size: 16px 10px;
+	background-repeat: no-repeat;
+	background-position: center;
+	pointer-events: none;
+  }
+  .dropdown__button.dropdown__button--active:after{
+	transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .dropdown__list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 34px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+	background: #FFFFFF;
+	height: 220px;
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: #EAEAEA white;
+	z-index: 2;
+	&::-webkit-scrollbar{
+		width: 3px;
+		height: 20px;
+		&-track{background-color: #fff;}
+		&-thumb{background-color: #EAEAEA;}
+ 
+	 }
+	
+	ul{
+	  margin-block:10px; 
+	  
+	  overflow: hidden;
+	  overflow-y: auto;
+	  scrollbar-width: thin;
+	  scrollbar-color: #e9e9e9 #fff;
+	  scrollbar-width: 3px;
+	   border-radius: 5px;
+	  
+	  &::-webkit-scrollbar-track {
+		background-color:white;
+		border-radius: 5px;
+	  }
+	}
+ } 
+  
+  .dropdown__list--visible {
+	display: block;
+	border:1px solid #e9e9e9;
+	border-top:0;
+	border-radius: 0 0 8px 8px;
+  }
+  
+  .dropdown__list-item {
+	margin: 0;
+	padding: 0;
+	border-bottom: 0px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 125%;
+	letter-spacing: -0.02em;
+	color: #222;
+	line-height: 1.5;
+	transition: .3s; 
+	cursor: pointer;
+	
+	padding-block:5px;
+	margin-inline:12px 20px;
+	border-bottom: 1px solid #e9e9e9;
+	&:hover{color: $a1;}
+  }
+  
+  .dropdown__input-hidden {
+	display: none;
+  }
