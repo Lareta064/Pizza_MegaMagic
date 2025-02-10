@@ -10,44 +10,61 @@ html(lang="ru")
 
 		//====убрать синий цвет у ссылок в сафари ========
 		meta(name="format-detection" content="telephone=no")
-		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
-		
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
 
 	body.body-dashboard
+
 		include ui-navigation.pug
 
 		block content
 			.container-dashboard
-				h2 Форма
-				.container-dashboard__content
-					.form-item
-						input(type="text" placeholder="Placeholder Text" name="name")
-					pre.
-						.form-item
-							input(type="text" placeholder="Placeholder Text" name="name")
-					br
-					.form-item
-						textarea( placeholder="Placeholder Text" name="message")
-					pre.
-						.form-item
-							textarea(type="text" placeholder="Placeholder Text" name="message")
-					
-					br
-					.form-item.error
-						input(type="text" placeholder="Placeholder Text" name="name")
-						p Error text
-					pre.
-						.form-item.error
-							input(type="text" placeholder="Placeholder Text" name="name")
-							p Error text
-					
-					br
-					+select("Choose An Option", 'product_name')
-					pre.
-						+select("Речной песок", 'product_name')
-				
+				h2 HEADERS
+				header.header
+					.header-content
+						a(href="#!").btn-back.btn-round
+						.h2-up Войти
+				pre.
+					header.header
+						.header-content
+							a(href="#!").btn-back.btn-round
+							.h1 Войти
+				hr
+				header.header
+					.header-content
+						a(href="#!").btn-back
+						.h2-up Регистрация
+				pre.
+					header.header
+						.header-content
+							a(href="#!").btn-back
+							.h2-up Регистрация
+				hr
+				header.header
+					.header-content
+						a(href="#!").btn-close
+						.h2-up Профиль
+				pre.
+					header.header
+						.header-content
+							a(href="#!").btn-close
+							.h2-up Профиль
+				hr
+				header.header
+					.header-content
+						button.menu-btn
+							span
+						.header-group
+							.lang-select.dropdown
+								button.dropdown__button(type="button") RU
+								
+								.dropdown__list
+									ul
+										li.dropdown__list-item(data-value="Речной песок") RU
+										li.dropdown__list-item(data-value="Пример заполнения 2") EN
+		
+
+
 		script.
 			/*=====CUSTOM SELECT===== */
 			if (window.NodeList && !NodeList.prototype.forEach) {
@@ -79,6 +96,7 @@ html(lang="ru")
 					dropDownBtn.innerText = this.innerText;
 					dropDownBtn.focus();
 					if(dropDownInput){dropDownInput.value = this.dataset.value;}
+					
 					dropDownList.classList.remove('dropdown__list--visible');
 					dropDownBtn.classList.remove('dropdown__button--active');
 					
@@ -101,3 +119,4 @@ html(lang="ru")
 					}
 				});
 			});
+										

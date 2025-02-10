@@ -1,7 +1,7 @@
 @use "base/var" as *;
 @font-face{
 	font-family: 'Cuprum';
-	src: url('../fonts/Cuprum-Redular.woff2'), format('woff2');
+	src: url('../fonts/Cuprum-Regular.woff2'), format('woff2');
 	font-weight: 400;
 	font-display: swap;
 }
@@ -13,7 +13,7 @@
 }
 @font-face{
 	font-family: 'RobotoCondensed';
-	src: url('../fonts/RobotoCondensed-Redular.woff2'), format('woff2');
+	src: url('../fonts/RobotoCondensed-Regular.woff2'), format('woff2');
 	font-weight: 400;
 	font-display: swap;
 }
@@ -42,7 +42,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: $ff;
-	
+	font-size: 16px;
+    line-height: 1.50;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
 	
@@ -96,21 +97,38 @@ button {
 }
 
 input[type="submit"] {
-	padding: 0;
+	padding-block: 0;
 	cursor: pointer;
 }
 
-// input[type="submit"] {
-// 	appearance: none;
-// 	-moz-appearance: none;
-// 	-webkit-appearance: none;
-// }
+input[type="submit"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
 input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
 
-.container{
-	
+
+.header, .footer, .main,.container{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width:600px;
+	@media (max-width: 374px) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
+.w-100{width:100%!important;}
+.flex, .flex-center, .header-content, .header-group{
+	display: flex;
+	align-items: center;
+	column-gap:12px;
+}
+.flex-center{
+	justify-content: center;
+}

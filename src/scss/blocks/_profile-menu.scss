@@ -1,0 +1,30 @@
+/*custom select*/
+@use "../base/_var.scss" as *;
+.profile-header, .profile-menu .li{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	column-gap:12px;
+}
+.profile-header__avatar{
+	width: 66px;
+	height: 66px;
+	border-radius: 50%;
+	border:2px solid $p;
+	flex-shrink: 0;
+}
+.profile-header__btn{
+	margin-left: auto;
+	
+}
+.profile-menu{
+	display: flex;
+	flex-direction: column;
+	row-gap:30px;
+	.li{
+		
+		.h8{flex:1;}
+
+	}
+	.li-delete-profile{ .h8{color: $a1;}}
+}

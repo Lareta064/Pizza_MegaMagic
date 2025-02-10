@@ -18,9 +18,36 @@ html(lang="ru")
 		include ui-navigation.pug
 
 		block content
-			.container-dashboard
+			.container-dashboard(style="background:#e0e0e0;")
 				h2 Кнопки
 
 				.container-dashboard__content
-					.btn Перейти в каталог
-					
+					button.btn Заказать
+					pre.
+						button.btn Заказать
+					hr
+					a(href="#!").btn Заказать
+					pre.
+						a(href="#!").btn Заказать
+					hr
+					input.btn(type="submit" value="Заказать")
+					pre.
+						input.btn(type="submit" value="Заказать")
+					hr
+					button.btn-accent Заказать
+					pre.
+						button.btn-accent Заказать
+					hr
+					button.btn-light Дополнительно
+					pre.
+						button.btn-light Дополнительно
+					br
+					a(href="#!").btn-back
+					pre.
+						a(href="#!").btn-back
+					br
+					a(href="#!").btn-back.btn-round
+					pre.
+						a(href="#!").btn-back.btn-round
+					br
+					a(href="#!").btn-close
