@@ -124,7 +124,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 .w-100{width:100%!important;}
-.flex, .flex-center, .header-content, .header-right{
+.flex, .flex-center, .header-content, .header-right,.footer-content,.footer{
 	display: flex;
 	align-items: center;
 	column-gap:12px;
@@ -132,4 +132,5 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 
 .flex-center{
 	justify-content: center;
+	width: 100%;
 }

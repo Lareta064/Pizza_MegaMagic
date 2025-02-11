@@ -52,6 +52,7 @@
 .h8, .h11{
 	font-weight: 400;
 }
+
 .txt-14{
 	font-size: 14px;
     line-height: 1.43;
@@ -63,6 +64,7 @@
 .txt-bold{font-weight: 700!important;}
 .txt-up{text-transform: uppercase!important;}
 .txt-grey{color: $s5;}
+.txt-s3{color: $s3!important;}
 /*components*/
 .notify-item{
 	display: inline-block;
