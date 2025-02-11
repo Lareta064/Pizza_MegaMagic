@@ -116,7 +116,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width:600px;
+	max-width:430px;
 	@media (max-width: 374px) {
 		padding-left: 10px;
 		padding-right: 10px;
@@ -124,7 +124,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 .w-100{width:100%!important;}
-.flex, .flex-center, .header-content, .header-right,.footer-content,.footer{
+.flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper{
 	display: flex;
 	align-items: center;
 	column-gap:12px;
@@ -133,4 +133,13 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .flex-center{
 	justify-content: center;
 	width: 100%;
+}
+*.two-columns, .two-columns{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	row-gap:12px;
+	column-gap: 12px;
+	&>*{
+		grid-column: span 3;
+	}
 }

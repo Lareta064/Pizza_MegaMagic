@@ -1,2 +1,45 @@
+include ../layouts/_mixins-links.pug
+block variables
 
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
 
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					.cat-wrapper.scroll-wrapper(style="width: 430px")
+						+catCard(1,'Пицца')
+						+catCard(2,'Роллы')
+						+catCard(3,'Бургеры')
+						+catCard(4,'Закуски')
+						+catCard(5,'Напитки')
+						+catCard(6,'Десерты')
+						+catCard(7,'Салаты')
+						+catCard(8,'Наборы')
+					
+					.cat-wrapper.two-columns(style="width: 430px")
+						+catCard-flex(1,'Пицца')
+						+catCard-flex(2,'Роллы')
+						+catCard-flex(3,'Бургеры')
+						+catCard-flex(4,'Закуски')
+						+catCard-flex(5,'Напитки')
+						+catCard-flex(6,'Десерты')
+						+catCard-flex(7,'Салаты')
+						+catCard-flex(8,'Наборы')
+						
+						

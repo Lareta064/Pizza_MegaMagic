@@ -7,11 +7,13 @@
 @use "blocks/_select-drop";
 @use "blocks/_profile-menu";
 @use "blocks/_header";
+@use "blocks/_cards";
 
 
 @use "base/_form";
 
 
+@use "sections/_categories";
 @use "sections/_product-popup";
 @use "sections/_footer";
 

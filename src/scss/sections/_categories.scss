@@ -1,0 +1,13 @@
+@use "../base/var" as *;
+
+.cat-wrapper{
+	
+}
+.scroll-wrapper{
+	width: calc(50% + 50vw);
+	overflow: hidden;
+	overflow-x: auto;
+	scrollbar-width: none;
+	&::-webkit-scrollbar{display: none;}
+	&>*:last-child{margin-right: 12px;}
+}

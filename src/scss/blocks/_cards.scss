@@ -1,12 +1,45 @@
 @use "../base/var" as *;
 
+
 .cat-card{
 	border: 1px solid $s1;
+	background-color: #fff;
 	border-radius: 10px;
 	padding: 6px;
 	width: 80px;
 	min-height: 70px;
 	display: flex;
 	flex-direction: column;
-	&__img{width: 100%;}
+	row-gap:4px;
+	text-align: center;
+	color: $p;
+	flex-shrink: 0;
+	.card-img{
+		width: 100%;
+		height: 30px;
+	}
+}
+.cat-card.card-flex{
+	padding:10px;
+	border-radius: 12px;
+	height: 96px;
+	width: 100%;
+	align-items: center;
+	.card-img{height: 76px;width: 76px;}
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.2;
+	font-family: $fs;
+	
+}
+.card-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	margin: auto;
+}
+.card-flex, *.card-flex{
+	display: flex;
+	column-gap:10px;
+	flex-direction: row;
 }
