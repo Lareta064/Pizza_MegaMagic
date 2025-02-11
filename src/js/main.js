@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     let bodyEl = document.body;
+    /*PROMO SLIDER */
+    let mainSlider = new Swiper('.main-slider', {
+      slidesPerView: 1,
+      speed: 800,
+      spaceBetween:20,
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: ".main-slider-pagination",
+        clickable: true,
+      },
+    });
+    
     /*COUNTER */
     const counters = document.querySelectorAll('.counter');
     // Перебираем каждый блок счетчика
@@ -99,4 +114,52 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollWrapper = document.querySelector(".scroll-wrapper");
+  const catWrapper = document.querySelector(".cat-wrapper");
+
+  function smoothScrollTo(element, target, duration = 500) {
+      if ("scrollBehavior" in document.documentElement.style) {
+          element.scrollTo({ left: target, behavior: "smooth" });
+      } else {
+          const start = element.scrollLeft;
+          const startTime = performance.now();
+
+          function scrollStep(timestamp) {
+              const elapsed = timestamp - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              element.scrollLeft = start + (target - start) * progress;
+
+              if (progress < 1) {
+                  requestAnimationFrame(scrollStep);
+              }
+          }
+
+          requestAnimationFrame(scrollStep);
+      }
+  }
+
+  document.querySelectorAll(".cat-card").forEach((card) => {
+      card.addEventListener("click", function () {
+          // 🔹 Удаляем `active` у всех карточек
+          document.querySelectorAll(".cat-card").forEach(c => c.classList.remove("active"));
+          // 🔹 Добавляем `active` к текущей
+          this.classList.add("active");
+
+          // 🔹 Логика центрирования карточки
+          const scrollWrapperWidth = scrollWrapper.offsetWidth;
+          const catWrapperWidth = catWrapper.scrollWidth;
+          const cardRect = this.getBoundingClientRect();
+          const wrapperRect = scrollWrapper.getBoundingClientRect();
+
+          const cardCenter = cardRect.left + cardRect.width / 2;
+          const wrapperCenter = wrapperRect.left + scrollWrapperWidth / 2;
+
+          let scrollOffset = scrollWrapper.scrollLeft + (cardCenter - wrapperCenter);
+          scrollOffset = Math.max(0, Math.min(scrollOffset, catWrapperWidth - scrollWrapperWidth));
+
+          smoothScrollTo(scrollWrapper, scrollOffset, 500);
+      });
+  });
 });

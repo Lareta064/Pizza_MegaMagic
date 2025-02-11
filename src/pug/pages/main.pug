@@ -22,10 +22,37 @@ block content
 					
 					//PROFILE BTN
 					button.btn-profile
-						img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" alt="img")
+						img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" width="66" height="66"  alt="img")
 	//MAIN
 	main.main
-
+		.container
+			.wrapper-gap-20
+				//slider
+				.main-slider.swiper
+					.swiper-wrapper
+						.swiper-slide
+							img(src="./img/banners/banner1.webp", srcset="./img/banners/banner1@2x.webp 2x" width="540" height="325"  alt="img")
+						.swiper-slide
+							img(src="./img/banners/banner2.webp", srcset="./img/banners/banner2@2x.webp 2x" width="540" height="325"  alt="img")
+						.swiper-slide
+							img(src="./img/banners/banner1.webp", srcset="./img/banners/banner1@2x.webp 2x" width="540" height="325"  alt="img")
+						.swiper-slide
+							img(src="./img/banners/banner2.webp", srcset="./img/banners/banner2@2x.webp 2x" width="540" height="325"  alt="img")
+					.main-slider-pagination
+				
+				//categories
+				.scroll-wrapper
+					.cat-wrapper
+						+catCard(1,'Пицца')
+						+catCard(2,'Роллы')
+						+catCard(3,'Бургеры')
+						+catCard(4,'Закуски')
+						+catCard(5,'Напитки')
+						+catCard(6,'Десерты')
+						+catCard(7,'Салаты')
+						+catCard(8,'Наборы')
+	
+	
 	//FOOTER
 	footer.footer
 		.container
@@ -36,9 +63,7 @@ block content
 						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
 						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
 						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+						
 					.cart-preview__count.flex-center
 						span.h11 7
 				button.btn-open-cart

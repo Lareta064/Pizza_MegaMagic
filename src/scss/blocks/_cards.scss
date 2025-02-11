@@ -14,9 +14,13 @@
 	text-align: center;
 	color: $p;
 	flex-shrink: 0;
+	transition: .3s; 
 	.card-img{
 		width: 100%;
 		height: 30px;
+	}
+	&.active{
+		background-color: $s2;
 	}
 }
 .cat-card.card-flex{

@@ -1,11 +1,24 @@
 mixin catCard(img, title)
+	
+	a(href="#!").cat-card
+		.card-img
+			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x"  alt="img")
+		.card-txt
+			p !{title}
+mixin catCard-ui(img, title)
 	a(href="#!").cat-card
 		.card-img
 			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  alt="img")
 		.card-txt
 			p !{title}
-
 mixin catCard-flex(img, title)
+	a(href="#!").cat-card.card-flex
+		.card-img
+			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x"  alt="img")
+		.card-txt
+			p !{title}
+
+mixin catCard-flex-ui(img, title)
 	a(href="#!").cat-card.card-flex
 		.card-img
 			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  alt="img")
