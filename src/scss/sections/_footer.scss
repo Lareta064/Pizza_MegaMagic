@@ -6,7 +6,36 @@ footer.footer{
 	padding-bottom: 20px;
 	background-color: $p;
 	color: white;
+	.footer-content{width: 100%;}
 	.h11{
 		color: white;
+	}
+	.cart-preview{
+		display: flex;
+		flex:1;
+		justify-content: space-between;
+		&__img{
+			img{
+				display: inline;
+				vertical-align: middle;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border:2px solid white;
+				object-fit: cover;
+			}
+			img+img{
+				margin-left: -24px;
+			}
+		}
+		&__count{
+			width: 50px;
+			height: 50px;
+			background-color: #fff;
+			border-radius: 50%;
+			.h11{color: $p;}
+			
+
+		}
 	}
 }
