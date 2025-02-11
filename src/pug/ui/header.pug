@@ -21,9 +21,10 @@ html(lang="ru")
 			.container-dashboard
 				h2 HEADERS
 				header.header
-					.header-content
-						a(href="#!").btn-back.btn-round
-						.h2-up Войти
+					.container
+						.header-content
+							a(href="#!").btn-back.btn-round
+							.h2-up Войти
 				pre.
 					header.header
 						.header-content
@@ -31,9 +32,10 @@ html(lang="ru")
 							.h1 Войти
 				hr
 				header.header
-					.header-content
-						a(href="#!").btn-back
-						.h2-up Регистрация
+					.container
+						.header-content
+							a(href="#!").btn-back
+							.h2-up Регистрация
 				pre.
 					header.header
 						.header-content
@@ -41,9 +43,10 @@ html(lang="ru")
 							.h2-up Регистрация
 				hr
 				header.header
-					.header-content
-						a(href="#!").btn-close
-						.h2-up Профиль
+					.container
+						.header-content
+							a(href="#!").btn-close
+							.h2-up Профиль
 				pre.
 					header.header
 						.header-content
@@ -51,56 +54,60 @@ html(lang="ru")
 							.h2-up Профиль
 				hr
 				header.header
-					.header-content
-						button.menu-btn
-							span
-						.header-right
-							//LANG DROP
-							.lang-select.dropdown
-								button.dropdown__button(type="button") RU
+					.container
+						.header-content
+							button.menu-btn
+								span
+							.header-right
+								//LANG DROP
+								.lang-select.dropdown
+									button.dropdown__button(type="button") RU
+									
+									.dropdown__list
+										ul
+											li.dropdown__list-item.selected(data-value="RU") Русский
+											li.dropdown__list-item(data-value="EN") English
+											li.dropdown__list-item(data-value="LV") latviski
+									//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+									input.dropdown__input-hidden(type="hidden", name="lang")
 								
-								.dropdown__list
-									ul
-										li.dropdown__list-item.selected(data-value="RU") Русский
-										li.dropdown__list-item(data-value="EN") English
-										li.dropdown__list-item(data-value="LV") latviski
-								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
-								input.dropdown__input-hidden(type="hidden", name="lang")
-							
-							//PROFILE BTN
-							button.btn-profile
-								img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" alt="img")
+								//PROFILE BTN
+								button.btn-profile
+									img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" alt="img")
 		
 				hr
 				header.header.popup-header
-					.header-content
-						button.btn-back-dark
-							
-						.header-right
-							button.btn-favor.btn-round
-								svg.svg-favor
-									use(href='../img/sprite.svg#svg-favor')
-							
-							button.btn-share.btn-round
-								svg.svg-share
-									use(href='../img/sprite.svg#svg-share')
+					.container
+						.header-content
+							button.btn-back-dark
+								
+							.header-right
+								button.btn-favor.btn-round
+									svg.svg-favor
+										use(href='../img/sprite.svg#svg-favor')
+								
+								button.btn-share.btn-round
+									svg.svg-share
+										use(href='../img/sprite.svg#svg-share')
 				
 				hr
 				header.header.product-popup-header
-					.header-content
-						button.btn-close-dark.btn-abs
-							
-						.header-title
-							.h5 Пицца “Особая”
-							p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+					.container
+						.header-content
+							button.btn-close-dark.btn-abs
+								
+							.header-title
+								.h5 Пицца “Особая”
+								p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
 				hr
 				header.header
-					.header-content.header-content--justify
-						button.btn-back-dark
-							
-						button.btn-rounde
-							svg.svg-explore
-								use(href='../img/sprite.svg#svg-explore')
+					.container
+						.header-content.header-content--justify
+							button.btn-back-dark
+								
+							button.btn-rounde
+								svg.svg-explore
+									use(href='../img/sprite.svg#svg-explore')
 		
 		
 		script.

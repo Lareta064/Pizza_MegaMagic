@@ -46,6 +46,10 @@ body {
     line-height: 1.50;
 	-webkit-font-smoothing: subpixel-antialiased;
 	-moz-osx-font-smoothing: auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	&>*{width: 100%;}
 	
 }
 .lock{overflow: hidden; }
@@ -112,17 +116,21 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 
-.header, .footer, .main,.container{
+.container{
 	width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
-	max-width:430px;
+	max-width:600px;
+	margin-left: auto;
+	margin-right: auto;
+	
 	@media (max-width: 374px) {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
-
+.header, .footer{flex-shrink: 0;}
+main{flex:1}
 .w-100{width:100%!important;}
 .flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper{
 	display: flex;

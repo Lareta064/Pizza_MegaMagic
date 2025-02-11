@@ -40,20 +40,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    if (window.NodeList && !NodeList.prototype.forEach) {
-      NodeList.prototype.forEach = function (callback, thisArg) {
-        thisArg = thisArg || window;
-        for (var i = 0; i < this.length; i++) {
-        callback.call(thisArg, this[i], i, this);
-        }
-      };
+    /* profile-menu*/
+    const profileMenuOpen = document.querySelector('#open-profile-menu');
+    const profileMenu = document.querySelector('#profile-menu');
+    if(profileMenuOpen){
+      const profileMenuClose = profileMenu.querySelector('#close-profile-menu');
+      profileMenuOpen.addEventListener('click',()=>{
+        profileMenu.classList.add('active');
+      });
+      profileMenuClose.addEventListener('click',()=>{
+        profileMenu.classList.remove('active');
+      });
     }
-    /* DROPDOWN*/
+    /*CUSTOM SELECT */
     document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
       const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
       const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
       const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
       const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+      const dropDownSelected = dropDownList.querySelector('.selected');
 
       // Клик по кнопке. Открыть/Закрыть select
       dropDownBtn.addEventListener('click', function (e) {
@@ -66,9 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
       dropDownListItems.forEach(function (listItem) {
         listItem.addEventListener('click', function (e) {
         e.stopPropagation();
-        dropDownBtn.innerText = this.innerText;
+        dropDownListItems.forEach(function (item){item.classList.remove('selected')});
+        
+        dropDownBtn.innerText = this.dataset.value;
         dropDownBtn.focus();
         if(dropDownInput){dropDownInput.value = this.dataset.value;}
+        this.classList.add('selected')
         dropDownList.classList.remove('dropdown__list--visible');
         dropDownBtn.classList.remove('dropdown__button--active');
         

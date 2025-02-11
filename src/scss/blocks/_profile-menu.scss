@@ -1,5 +1,20 @@
 /*custom select*/
 @use "../base/_var.scss" as *;
+.profile-menu-wrapper{
+	position: fixed;
+	top: 0;
+	bottom: 0;left: 0;
+	width: 100%;
+	transform: translateX(-110%);
+	transition: .3s;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+
+	&.active{
+		transform: translateX(0);
+	}
+}
 .profile-header, .profile-menu .li{
 	width: 100%;
 	display: flex;
@@ -21,10 +36,37 @@
 	display: flex;
 	flex-direction: column;
 	row-gap:30px;
+	width: 100%;
+	
 	.li{
-		
+		cursor: pointer;
 		.h8{flex:1;}
 
 	}
 	.li-delete-profile{ .h8{color: $a1;}}
+}
+.profile-menu-body{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	width: 100%;
+	flex:1;
+	
+	.container{
+		display: flex;
+		flex-direction: column;
+		row-gap:40px;
+	}
+	.profile-menu{
+		max-height: calc(100vh - 125px - 85px - 200px);
+		overflow: hidden;
+		overflow-y: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar{ display: none;}
+	}
+	@media (max-width: 424px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.container{row-gap:20px;}
+		.profile-menu{max-height: calc(100vh - 125px - 85px - 120px); row-gap:10px;}
+	}
 }
