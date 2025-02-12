@@ -42,20 +42,19 @@ block content
 				
 				sectiion.products
 					//categories
-					.scroll-wrapper.mb-20
-						.cat-wrapper
-							+catCard(1,'Пицца')
-							+catCard(2,'Роллы')
-							+catCard(3,'Бургеры')
-							+catCard(4,'Закуски')
-							+catCard(5,'Напитки')
-							+catCard(6,'Десерты')
-							+catCard(7,'Салаты')
-							+catCard(8,'Наборы')
+					.cat-wrapper.two-columns
+						+catCard-flex-ui(1,'Пицца')
+						+catCard-flex-ui(2,'Роллы')
+						+catCard-flex-ui(3,'Бургеры')
+						+catCard-flex-ui(4,'Закуски')
+						+catCard-flex-ui(5,'Напитки')
+						+catCard-flex-ui(6,'Десерты')
+						+catCard-flex-ui(7,'Салаты')
+						+catCard-flex-ui(8,'Наборы')
 	
 			
 					h2.h9 Популярное
-					include ../sections/_products-tabs
+					include ../sections/_products-tabs2
 	//FOOTER
 	footer.footer
 		.container

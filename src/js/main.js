@@ -62,9 +62,11 @@ document.addEventListener("DOMContentLoaded", function () {
       const profileMenuClose = profileMenu.querySelector('#close-profile-menu');
       profileMenuOpen.addEventListener('click',()=>{
         profileMenu.classList.add('active');
+        bodyEl.classList.add('lock');
       });
       profileMenuClose.addEventListener('click',()=>{
         profileMenu.classList.remove('active');
+        bodyEl.classList.remove('lock');
       });
     }
     /*CUSTOM SELECT */

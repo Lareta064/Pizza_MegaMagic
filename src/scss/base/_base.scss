@@ -136,7 +136,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	&>*{width: 100%;}
 }
 .header, .footer{flex-shrink: 0;}
-main{flex:1}
+main{flex:1; padding-bottom: 110px;}
 .w-100{width:100%!important;}
 .flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper{
 	display: flex;
@@ -157,3 +157,8 @@ main{flex:1}
 		grid-column: span 3;
 	}
 }
+.p-10{
+	padding: 10px;
+}
+.mt-20{margin-top: 20px!important;}
+.mb-20{margin-bottom: 20px!important;}
