@@ -93,3 +93,10 @@
 		transform: translateX(0);
 	}
 }
+.modal-frame.modal-frame--downUp{
+	transform: translate(0, 110%);
+	z-index: 11;
+	&.visible{
+		transform: translate(0, 0);
+	}
+}

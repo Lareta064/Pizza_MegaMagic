@@ -1,23 +1,14 @@
-// popup с data-modal  открывается по клику на  элемент с data-btn , когда значения этих дата атрибутов совпадают
-.modal-frame(data-modal="product")
-	.header.popup-header
+// popup с data-modal =add-product  с data-btn=add-product 
+.modal-frame.modal-frame--downUp.visible(data-modal="add-product")
+	.header.product-popup-header
 		.container
 			.header-content
-				button.btn-back-dark(data-close)
+				button.btn-close-dark.btn-abs(data-close)
 					
-				.header-right
-					label.btn-favor.btn-round.fake-label
-						input(type="checkbox" name="favor_input")
-						svg.svg-favor
-							use(href='../img/sprite.svg#svg-favor')
-					
-					button.btn-share.btn-round
-						svg.svg-share
-							use(href='../img/sprite.svg#svg-share')
+				.header-title
+					.h5 Пицца “Особая”
+					p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
 	.popup-body
-		.popup-body__img.resize-img
-			.resize-img__borders
-			img#scale-img.medium(src="./img/goods/pizza1-big.webp", srcset="../img/goods/pizza1-big@2x.webp 2x" width="550" height="550" alt="img")
 		.container.gap-20
 			.popup-body__header
 				.h5 Пицца “Особая”
@@ -56,6 +47,6 @@
 				.counter-wrapper__group
 					p.txt-grey Вес: 550 гр.
 			button.btn-accent.w-100 + 630 &#8381;
-			button.show-add-product.flex-center(data-btn="add-product" )
+			button.show-add-product.flex-center
 				span Добавить ингредиенты
 				span.chevron-down
