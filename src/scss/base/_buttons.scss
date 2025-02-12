@@ -131,4 +131,5 @@
 }
 input.btn{width: fit-content;}
 .btn-favor input:checked + svg{color: $a1;}
+.show-add-product>*{pointer-events: none;}
 .w-100{width:100%!important;}

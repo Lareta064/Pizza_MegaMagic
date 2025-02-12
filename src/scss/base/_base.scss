@@ -176,3 +176,9 @@ main{flex:1; padding-bottom: 110px; background-color: #fff;}
 }
 .mt-20{margin-top: 20px!important;}
 .mb-20{margin-bottom: 20px!important;}
+.scroll-y{
+	overflow:hidden;
+	overflow-y: auto;
+	scrollbar-width: 0;
+	&::-webkit-scrollbar{display: none;}
+}

@@ -61,7 +61,9 @@
 	font-size: 12px;
     line-height: 1.43;
 }
-.txt-bold{font-weight: 700!important;}
+
+.title-16, .txt-bold{font-weight: 700!important;}
+
 .txt-up{text-transform: uppercase!important;}
 .txt-grey{color: $s5;}
 .bg-grey{background-color: $s2!important;}
