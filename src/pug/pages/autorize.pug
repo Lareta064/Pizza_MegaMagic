@@ -1,0 +1,36 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header.header--autorize
+		.container
+			.header-content
+				a(href="profile-login.html").btn-back.btn-round
+				.h2-up Войти
+	
+	main.autorization
+		.autorization-head.bg-grey
+			.logo-block
+				svg.svg-logo
+					use(href='./img/sprite.svg#svg-logo')
+		
+		.form-wrapper
+			.container
+				form(action="#!" method="method")
+					.form-item
+						input(type="text" placeholder="Укажите мобильный телефон" name="phone")
+					.form-item
+						input(type="password" placeholder="Пароль" name="pass")
+					
+					.form-btn.column-center
+						a(href="#!").flex-link
+							span Сбросить пароль
+							svg.svg-reload
+								use(href='./img/sprite.svg#svg-reload')
+						button.btn-accent.w-100(type="submit") Войти
+	//FOOTER
+	footer.footer
+		.container
+			.footer-content.flex-center
+				.h11 Нет аккаунта?
+				a.h11.txt-s3(href="registr.html") Зарегистрируйтесь сейчас

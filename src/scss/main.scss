@@ -17,7 +17,9 @@
 @use "base/_form";
 
 
+@use "sections/_autoriz.scss";
 @use "sections/_categories";
+
 @use "sections/_products-tabs";
 @use "sections/_product-popup";
 @use "sections/_footer";

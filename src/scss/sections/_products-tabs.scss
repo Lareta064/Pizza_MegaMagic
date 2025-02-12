@@ -1,6 +1,6 @@
-.products-content.two-columns{
-	display: none;
-	&.active{
-		display: grid;
-	}
+.products-content{
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	&>*{width: 100%;}
 }

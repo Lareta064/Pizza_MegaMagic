@@ -40,9 +40,9 @@ block content
 							img(src="./img/banners/banner2.webp", srcset="./img/banners/banner2@2x.webp 2x" width="540" height="325"  alt="img")
 					.main-slider-pagination
 				
-				sectiion.products.wrapper-gap-20
+				sectiion.products
 					//categories
-					.scroll-wrapper
+					.scroll-wrapper.mb-20
 						.cat-wrapper
 							+catCard(1,'Пицца')
 							+catCard(2,'Роллы')
@@ -53,12 +53,12 @@ block content
 							+catCard(7,'Салаты')
 							+catCard(8,'Наборы')
 	
-					.products-group
-						h2.h9 Популярное
-						include ../sections/_products-tabs
-					.products-group
-						h2.h9 Пицца
-						include ../sections/_category-products
+			
+					h2.h9 Популярное
+					include ../sections/_products-tabs
+					include ../sections/_category-products
+	
+	
 	//FOOTER
 	footer.footer
 		.container
