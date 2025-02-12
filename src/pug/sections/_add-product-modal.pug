@@ -10,10 +10,6 @@
 					p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
 	.popup-body
 		.container.gap-20
-			.popup-body__header
-				.h5 Пицца “Особая”
-				p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
-			
 			.popup-body__filters.gap-12
 				.switch-group.switch-group--size
 					label.switch-label(data-size="small")
@@ -36,7 +32,17 @@
 						input(type="radio" name="switch_name")
 						span.switch-btn Сырный бортик
 
-
+			.add-products-group
+				+addCard(1,'Лук', 80)
+				+addCard(2,'Перчик Чили', 100)
+				+addCard(3,'Бекон', 130)
+				+addCard(4,'Сыр', 100)
+				+addCard(5,'Моцарелла', 79)
+				+addCard(6,'Сыры чеддер и пармезан', 79)
+				+addCard(7,'Острый перец халапеньо', 59)(class="hiiden-card")
+				+addCard(8,'Свежие томаты', 59)(class="hiiden-card")
+				+addCard(9,'Маринованные огурчики', 159)(class="hiiden-card")
+				
 	//POPUP FOOTER
 	footer.footer.footer--white
 		.container.gap-20
