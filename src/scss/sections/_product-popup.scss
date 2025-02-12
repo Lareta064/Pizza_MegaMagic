@@ -74,8 +74,8 @@
 		height: 545px;
 	}
 	#scale-img.small{
-		width: 445px;
-		height: 445px;
+		width: 450px;
+		height: 450px;
 	}
 }
 .modal-frame{
@@ -87,4 +87,9 @@
 	z-index: 10;
 	background-color: #fff;
 	overflow: hidden;
+	transform: translateX(110%);
+	transition: .3s;
+	&.visible{
+		transform: translateX(0);
+	}
 }

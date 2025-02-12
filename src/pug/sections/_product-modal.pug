@@ -3,10 +3,11 @@
 	.header.popup-header
 		.container
 			.header-content
-				button.btn-back-dark
+				button.btn-back-dark(data-btn)
 					
 				.header-right
-					button.btn-favor.btn-round
+					label.btn-favor.btn-round.fake-label
+						input(type="checkbox" name="favor_input")
 						svg.svg-favor
 							use(href='../img/sprite.svg#svg-favor')
 					
@@ -43,4 +44,18 @@
 					label.switch-label
 						input(type="radio" name="switch_name")
 						span.switch-btn Сырный бортик
-			
+
+
+	//POPUP FOOTER
+	footer.footer.footer--white
+		.container.gap-20
+			.counter-wrapper
+				.counter-wrapper__group
+					p.txt-bold Количество:
+					+counter
+				.counter-wrapper__group
+					p.txt-grey Вес: 550 гр.
+			button.btn-accent.w-100 + 630 &#8381;
+			button.show-add-product.flex-center
+				span Добавить ингредиенты
+				span.chevron-down
