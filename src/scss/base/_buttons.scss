@@ -82,6 +82,9 @@
 	width: 54px;
 	height: 54px;
 	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 }
 .btn-profile{
@@ -127,4 +130,5 @@
 	z-index: 2;
 }
 input.btn{width: fit-content;}
+.btn-favor input:checked + svg{color: $a1;}
 .w-100{width:100%!important;}

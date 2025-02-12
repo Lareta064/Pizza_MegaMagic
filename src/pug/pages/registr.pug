@@ -1,0 +1,33 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header
+		.container
+			.header-content
+				a(href="#!").btn-back.btn-round
+				.h2-up Регистрация
+	
+	main.registration.column-center
+		.form-wrapper
+			.container
+				form(action="#!" method="method")
+					.form-item
+						input(type="text" placeholder="Укажите имя" name="name")
+					.form-item
+						input(type="text" placeholder="Укажите мобильный телефон" name="phone")
+					.form-item
+						input(type="text" placeholder="Укажите электронную почту" name="email")
+					.form-item
+						input(type="password" placeholder="Пароль" name="pass")
+					.form-item
+						input(type="password" placeholder="Повторите пароль" name="repeat_pass")
+					
+					.form-btn
+						button.btn-accent.w-100(type="submit") Войти
+	//FOOTER
+	footer.footer
+		.container
+			.footer-content.flex-center
+				.h11 Есть аккаунт?
+				a.h11.txt-s3(href="autoriz.html") Войти сейчас

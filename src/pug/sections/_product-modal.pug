@@ -1,0 +1,61 @@
+// popup с data-modal  открывается по клику на  элемент с data-btn , когда значения этих дата атрибутов совпадают
+.modal-frame(data-modal="product")
+	.header.popup-header
+		.container
+			.header-content
+				button.btn-back-dark(data-btn)
+					
+				.header-right
+					label.btn-favor.btn-round.fake-label
+						input(type="checkbox" name="favor_input")
+						svg.svg-favor
+							use(href='../img/sprite.svg#svg-favor')
+					
+					button.btn-share.btn-round
+						svg.svg-share
+							use(href='../img/sprite.svg#svg-share')
+	.popup-body
+		.popup-body__img.resize-img
+			.resize-img__borders
+			img#scale-img.medium(src="./img/goods/pizza1-big.webp", srcset="../img/goods/pizza1-big@2x.webp 2x" width="550" height="550" alt="img")
+		.container.gap-20
+			.popup-body__header
+				.h5 Пицца “Особая”
+				p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+			
+			.popup-body__filters.gap-12
+				.switch-group.switch-group--size
+					label.switch-label(data-size="small")
+						input(type="radio" name="switch_name2")
+						span.switch-btn 28см
+					label.switch-label(data-size="medium")
+						input(type="radio" name="switch_name2" checked)
+						span.switch-btn 32см
+					label.switch-label(data-size="maxi")
+						input(type="radio" name="switch_name2" )
+						span.switch-btn 42см
+				.switch-group
+					label.switch-label
+						input(type="radio" name="switch_name")
+						span.switch-btn Традиционное
+					label.switch-label
+						input(type="radio" name="switch_name" checked)
+						span.switch-btn Тонкое
+					label.switch-label
+						input(type="radio" name="switch_name")
+						span.switch-btn Сырный бортик
+
+
+	//POPUP FOOTER
+	footer.footer.footer--white
+		.container.gap-20
+			.counter-wrapper
+				.counter-wrapper__group
+					p.txt-bold Количество:
+					+counter
+				.counter-wrapper__group
+					p.txt-grey Вес: 550 гр.
+			button.btn-accent.w-100 + 630 &#8381;
+			button.show-add-product.flex-center
+				span Добавить ингредиенты
+				span.chevron-down

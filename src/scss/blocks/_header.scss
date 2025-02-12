@@ -1,12 +1,14 @@
 @use "../base/var" as *;
 .header{
 	width: 100%;
-	
 	padding-top: 50px;
 	padding-bottom: 20px;
 	min-height: 124px;
 	background-color: #fff;
 	border-bottom: 1px solid $s1;
+	position: sticky;
+	top:0;
+	z-index: 5;
 	&-content{width: 100%;}
 	@media (max-width: 374px) {
 		padding-left: 10px;

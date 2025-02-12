@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 
 .footer{
-	height: 82px;
+	min-height: 82px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: $p;
@@ -41,4 +41,15 @@
 
 		}
 	}
+}
+footer.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 5;
+}
+.footer.footer--white{
+	background-color: #fff;
+	color: $p;
 }

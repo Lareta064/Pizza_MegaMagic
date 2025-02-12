@@ -1,0 +1,10 @@
+.products-content{
+	display: flex;
+	flex-direction: column;
+	row-gap: 12px;
+	&>*{width: 100%;}
+}
+.products .products-group {
+	scroll-margin-top: 100px;
+	&+.products-group{margin-top: 20px;}
+}

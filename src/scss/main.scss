@@ -11,13 +11,18 @@
 
 @use "blocks/_cards";
 @use "blocks/_switch-group";
+@use "blocks/_counter";
+
 
 
 
 @use "base/_form";
 
 
+@use "sections/_autoriz.scss";
 @use "sections/_categories";
+
+@use "sections/_products-main-page.scss";
 @use "sections/_product-popup";
 @use "sections/_footer";
 
