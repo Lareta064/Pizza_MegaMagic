@@ -48,8 +48,26 @@ footer.footer{
 	left: 0;
 	right: 0;
 	z-index: 5;
+	.flex-between{column-gap:24px;}
 }
 .footer.footer--white{
 	background-color: #fff;
 	color: $p;
+}
+.price-block{
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 118%;
+	color: $p;
+	font-family: $fs;
+	span{font-size: 24px;}
+}
+.total-price{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap:24px;
 }

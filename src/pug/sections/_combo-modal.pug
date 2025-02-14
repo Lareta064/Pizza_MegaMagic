@@ -1,0 +1,139 @@
+// popup с data-modal  combo открывается по клику на  элемент с data-btn combo
+.modal-frame(data-modal="product")
+	//ЭКРАН С ОПИСАНИЕМ ПРОДУКТА
+	.modal-frame-firstScreen
+		.header.popup-header
+			.container
+				.header-content
+					button.btn-back-dark(data-close)
+						
+					.header-right
+						label.btn-favor.btn-round.fake-label
+							input(type="checkbox" name="favor_input")
+							svg.svg-favor
+								use(href='./img/sprite.svg#svg-favor')
+						
+						button.btn-share.btn-round
+							svg.svg-share
+								use(href='./img/sprite.svg#svg-share')
+		.popup-body
+			.popup-body__img.resize-img
+				.resize-img__borders
+				img#scale-img.medium(src="./img/goods/pizza1-big.webp", srcset="./img/goods/pizza1-big@2x.webp 2x" width="550" height="550" alt="img")
+			.container.gap-20
+				.popup-body__header
+					.h5 Пицца “Особая”
+					p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+				
+				.popup-body__filters.gap-12
+					.switch-group.switch-group--size
+						label.switch-label(data-size="small")
+							input(type="radio" name="switch_name2")
+							span.switch-btn 28см
+						label.switch-label(data-size="medium")
+							input(type="radio" name="switch_name2" checked)
+							span.switch-btn 32см
+						label.switch-label(data-size="maxi")
+							input(type="radio" name="switch_name2" )
+							span.switch-btn 42см
+					.switch-group
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Традиционное
+						label.switch-label
+							input(type="radio" name="switch_name" checked)
+							span.switch-btn Тонкое
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Сырный бортик
+
+	//ЭКРАН ДОП ПРОДУКТЫ
+	
+	// popup с data-modal =add-product  с data-btn=add-product 
+	.modal-frame.modal-frame--downUp#addProducts
+		.header.product-popup-header
+			.container
+				.header-content
+					button.btn-close-dark#close-addProducts
+					.header-title
+						.h5 Пицца “Особая”
+						p.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+		.popup-body.scroll-y
+			.container.gap-20
+				.popup-body__filters.gap-12
+					.switch-group.switch-group--size
+						label.switch-label(data-size="small")
+							
+							span.switch-btn 28см
+						label.switch-label(data-size="medium")
+							
+							span.switch-btn 32см
+						label.switch-label(data-size="maxi")
+							input(type="radio" name="switch_name2" )
+							span.switch-btn 42см
+					.switch-group
+						label.switch-label
+							
+							span.switch-btn Традиционное
+						label.switch-label
+							
+							span.switch-btn Тонкое
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Сырный бортик
+
+				.content-wrapper.gap-20
+					.content-wrapper-group.gap-12
+						.title-16 Добавить:
+						.add-products-group
+							+addCard(1,'Лук', 80)
+							+addCard(2,'Перчик Чили', 100)
+							+addCard(3,'Бекон', 130)
+							+addCard(4,'Сыр', 100)
+							+addCard(5,'Моцарелла', 79)
+							+addCard(6,'Сыры чеддер и пармезан', 79)
+							+addCard(7,'Острый перец халапеньо', 59)(class="hide-card")
+							+addCard(8,'Свежие томаты', 59)(class="hide-card")
+							+addCard(9,'Маринованные огурчики', 159)(class="hide-card")
+							
+							
+						//SHOW ALL CARDS
+						button.show-all-product.flex
+							span Показать все
+							span.chevron-down
+							
+					.content-wrapper-group.gap-12
+						.title-16 Убрать:
+						.filters-set
+							.filter-label
+								span Моцарелла
+								button.remove-self
+							.filter-label
+								span Ананасы
+								button.remove-self
+							.filter-label
+								span Бекон
+								button.remove-self
+							.filter-label
+								span Каперсы
+								button.remove-self
+							.filter-label
+								span Перец чили
+								button.remove-self
+	
+	
+	
+	
+	//POPUP FOOTER
+	footer.footer.footer--white.popUp-footer
+		.container.gap-20
+			.counter-wrapper
+				.counter-wrapper__group
+					span.txt-bold Количество:
+					+counter
+				.counter-wrapper__group
+					p.txt-grey Вес: 550 гр.
+			button.btn-accent.w-100 + 630 &#8381;
+			button.show-add-product.flex-center#show-addProducts
+				span Добавить ингредиенты
+				span.chevron-down

@@ -135,7 +135,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .header, .footer{flex-shrink: 0;}
 main{flex:1; padding-bottom: 110px; background-color: #fff;}
 
-.flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper, .flex-link, .column-center,.filter-label{
+.flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper, .flex-link, .column-center,.filter-label,.flex-between{
 	display: flex;
 	align-items: center;
 	column-gap:12px;
@@ -149,6 +149,7 @@ main{flex:1; padding-bottom: 110px; background-color: #fff;}
 	justify-content: center;
 	width: 100%;
 }
+.flex-between{justify-content: space-between;}
 *.two-columns, .two-columns, .products-content.two-columns{
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
