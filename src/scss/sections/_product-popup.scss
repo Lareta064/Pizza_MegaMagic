@@ -31,7 +31,7 @@
 .resize-img{
 	position: relative;
 	height: 295px;
-	margin-top: -125px;
+	// margin-top: -125px;
 	
 	.resize-img__borders{
 		width: 445px;
@@ -124,3 +124,11 @@
 	
 }
 #addProducts.visible + .popUp-footer #show-addProducts{display: none;}
+.popup-body.popup-body--mt{margin-top: -125px;}
+.popup-body{
+	
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 215px);
+    padding-bottom: 20px;
+}

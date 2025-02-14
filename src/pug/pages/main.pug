@@ -66,7 +66,7 @@ block content
 					.products-group#roll
 						h2.h9 Роллы
 						.products-content
-							a(href="#!").product.product-horiz
+							a(href="#!" data-btn="combo").product.product-horiz
 								.product__img
 									img(src="./img/goods/chiken1.webp", srcset="./img/goods/chiken1@2x.webp 2x" width="185" height="146" alt="img")
 								.product__body
@@ -155,7 +155,7 @@ block content
 						
 					.cart-preview__count.flex-center
 						span.h11 7
-				a(href="cart.html").btn-open-cart
+				a(href="#!" data-modal="cart-page").btn-open-cart
 
 			
 	//PROFILE FRAME открывается по клику на БУРГЕР
@@ -225,10 +225,12 @@ block content
 						svg.svg-login
 							use(href='./img/sprite.svg#svg-login')
 
-	//POPUP
+	//PIZZA POPUP
 	include ../sections/_product-modal
-	
-	//additional products
-	//- include ../sections/_add-product-modal
+	//COMBO POPUP
+	include ../sections/_combo-modal
+	//Корзина
+	include ../sections/_cart-popup
+
 block variables
 	-var title = "Pizza Mega Magic";
