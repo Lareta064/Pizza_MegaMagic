@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
+    
     if( modalFrames.length > 0){
       const modalFramesClose = document.querySelectorAll('[data-close]');
 
@@ -135,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for(let frame of modalFrames){
           const frameAttr =frame.getAttribute('data-modal');	
           if(frameAttr == itemAttr){
+           
           frame.classList.add('visible');
           bodyEl.classList.add('lock');
           }
@@ -250,5 +252,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
           smoothScrollTo(scrollWrapper, scrollOffset, 500);
       });
+  });
+});
+// активируем checked  у свитч по загрузке
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".switch-group input:checked").forEach((input) => {
+    console.log('123');
+      input.dispatchEvent(new Event("change"));
   });
 });
