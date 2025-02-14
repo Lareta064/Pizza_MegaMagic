@@ -27,7 +27,30 @@
 							.counter-wrapper__group
 								span.txt-14.txt-red Изменить:
 								+counter-grey
-					
+					//Кнопка удаления товара  по свайпу влево
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+				
+				//КАРТОЧКА
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Пицца “Маргарита”
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					//Кнопка удаления товара  по свайпу влево
 					button.swipe-btn
 						svg.svg-delete
 							use(href='./img/sprite.svg#svg-delete')
@@ -62,7 +85,7 @@
 							.counter-wrapper__group
 								span.txt-14.txt-red Изменить:
 								+counter-grey
-					
+					//Кнопка удаления товара по свайпу влево
 					button.swipe-btn
 						svg.svg-delete
 							use(href='./img/sprite.svg#svg-delete')
@@ -95,7 +118,26 @@
 						.card-txt
 							p Соусы
 						button(type="button" data-btn="recommend").btn-light Выбрать
-	
+		//BONUS
+		.container
+			.bonus-block.gap-20
+				.flex
+					.form-item
+						input(type="text" placeholder="Введите промокод")
+					a(href="#!").btn Применить
+				.flex
+					.form-item
+						input(type="text" placeholder="Сколько бонусов списать")
+						p.txt-14 Доступно бонусов: 103251
+					
+					a(href="#!").btn Применить
+		//TOTAL SUMM
+		.total-price-wrapper
+			.container
+				.total-price
+					.h3 Заказ
+					p 4 шт. на сумму
+					.price-block 1625&nbsp;#[span &#8381;]
 	//POPUP FOOTER
 	footer.footer.footer--white.popUp-footer
 		.container
@@ -114,13 +156,13 @@
 					.card-img
 						img(src="./img/goods/juice2.webp", srcset="./img/goods/juice2@2x.webp 2x" width="80" height="80" alt="img")
 					.card-txt
-						p Напитки
-					button(type="button" ).btn-light Выбрать
+						p Пепси-Кола
+					span.btn-light 80 &#8381;
 				.recommend-card
 					.card-img
 						img(src="./img/goods/juice3.webp", srcset="./img/goods/juice3@2x.webp 2x" width="80" height="80" alt="img")
 					.card-txt
-						p Напитки
-					button(type="button" ).btn-light Выбрать
+						p Фанта
+					span.btn-light 120 &#8381;
 
 

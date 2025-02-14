@@ -72,3 +72,14 @@
 	scrollbar-width: none;
 	&::-webkit-scrollbar{display: none;}
 }
+.bonus-block{
+	.flex{
+		.form-item{flex:1;}
+		.txt-14{color: $s4;}
+	}
+}
+.total-price-wrapper{
+	padding-top: 20px;
+	background-color: #fff;
+	padding-bottom: 20px;
+}
