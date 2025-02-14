@@ -1,66 +1,111 @@
 
 .modal-frame(data-modal="cart-page")
-	.cart-page-body.wrapper-gap-20
-		//КАРТОЧКА
-		.cart-item-group
-			.cart-item
-				.cart-item__top
-					.card-img
-						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
-					.card-txt
-						.title-16 Пицца “Маргарита”
-						p Традиционное, 28 см
-						span.txt-14 1 шт
-					
-					button.remove-self
-				
-				.cart-item__bottom
-					.cart-price.title-16 335 &#8381;
-					.counter-wrapper__group
-						span.txt-14.txt-red Изменить:
-						+counter-grey
-			
-			button.swipe-btn
-				svg.svg-delete
-					use(href='./img/sprite.svg#svg-delete')
-		
-		
-		//КАРТОЧКА COMBI
-		.cart-item-group
-			.cart-item
-				.cart-item__top
-					.card-img
-						img(src="./img/goods/chiken1.webp", srcset="./img/goods/chiken1@2x.webp 2x" width="70"  height="62" alt="img")
-					.card-txt
-						.title-16 Чикен бокс
-						p Традиционное, 28 см
-						span.txt-14 1 шт
-						
-						.cart-set-item
-							p.txt-14 Куриные наггетсы
-							p 1 шт
-						.cart-set-item
-							p.txt-14 Картофель фри
-							p Стандартная, 80 г
-						.cart-set-item
-							p.txt-14 Соус Сырный
-							p 1 шт, 25 г
-					
-					
-					button.remove-self
-				
-				.cart-item__bottom
-					.cart-price.title-16 335 &#8381;
-					.counter-wrapper__group
-						span.txt-14.txt-red Изменить:
-						+counter-grey
-			
-			button.swipe-btn
-				svg.svg-delete
-					use(href='./img/sprite.svg#svg-delete')
+	header.header
+		.header-content
+			a(href="index.html").btn-back
+			.h2-up Корзина
 	
+	//MAIN
+	.popup-body.bg-grey.gap-20
+		.container
+			.cart-page-body.wrapper-gap-20
+				//КАРТОЧКА
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Пицца “Маргарита”
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+				
+				
+				//КАРТОЧКА COMBI
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/chiken1.webp", srcset="./img/goods/chiken1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Чикен бокс
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+								
+								.cart-set-item
+									p.txt-14 Куриные наггетсы
+									p 1 шт
+								.cart-set-item
+									p.txt-14 Картофель фри
+									p Стандартная, 80 г
+								.cart-set-item
+									p.txt-14 Соус Сырный
+									p 1 шт, 25 г
+							
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+			
+		.recommend
+			.container.gap-12
+				.h5 Рекомендуем к вашему заказу
+				.recommend-wrapper
+					.recommend-card
+						.card-img
+							img(src="./img/goods/juice6.webp", srcset="./img/goods/juice6@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Напитки
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Соусы
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/juice6.webp", srcset="./img/goods/juice6@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Напитки
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Соусы
+						button(type="button" data-btn="recommend").btn-light Выбрать
 	
 	//POPUP FOOTER
 	footer.footer.footer--white.popUp-footer
 		.container
 			button.btn-accent.w-100 Оформить
+
+	//RECOMMEND PRODUCTS POPUP открывается по клику на кнопку на карточке .recommend-card
+	.recommend-modal.modal-frame.modal-frame--downUp(data-modal="recommend")
+		
+		.header-content
+			button.btn-close-dark.btn-abs(data-close)
+			.header-title
+				.h10 Напитки к вашему заказу:
+				
