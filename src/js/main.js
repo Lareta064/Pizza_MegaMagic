@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
-    
+
+   
     if( modalFrames.length > 0){
       const modalFramesClose = document.querySelectorAll('[data-close]');
 
@@ -143,17 +144,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    
-    /*=============== закрыть модалки по клику вне ===============*/
-      // for(let frame of modalFrames){
-      //   frame.addEventListener('click', function(e){
-      //     if(e.target === e.currentTarget){
-      //       this.classList.remove(`visible`);
-      //       bodyEl.classList.remove('lock');
-      //     }
-      //   });
-      // }
-
+   
       if(modalFramesClose){
         modalFramesClose.forEach((closeItem)=>{
           closeItem.addEventListener('click', ()=>{
@@ -164,6 +155,17 @@ document.addEventListener("DOMContentLoaded", function () {
         
       }
     }
+    // SHOW ADD PRODUCTS POPUP
+    const showAddProducts = document.querySelector('#show-addProducts');
+    const addProductsModal = document.querySelector('#addProducts');
+    const closeAddProductsModal = document.querySelector('#close-addProducts');
+    
+    showAddProducts.addEventListener('click', ()=>{
+      addProductsModal.classList.add('visible');
+    });
+    closeAddProductsModal.addEventListener('click', ()=>{
+      addProductsModal.classList.remove('visible');
+    });
     /*PIZZA SIZE */
     const sizeToggleWrapper = document.querySelector('.switch-group--size');
     if(sizeToggleWrapper){
