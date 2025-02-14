@@ -11,15 +11,15 @@
 						label.btn-favor.btn-round.fake-label
 							input(type="checkbox" name="favor_input")
 							svg.svg-favor
-								use(href='../img/sprite.svg#svg-favor')
+								use(href='./img/sprite.svg#svg-favor')
 						
 						button.btn-share.btn-round
 							svg.svg-share
-								use(href='../img/sprite.svg#svg-share')
+								use(href='./img/sprite.svg#svg-share')
 		.popup-body
 			.popup-body__img.resize-img
 				.resize-img__borders
-				img#scale-img.medium(src="./img/goods/pizza1-big.webp", srcset="../img/goods/pizza1-big@2x.webp 2x" width="550" height="550" alt="img")
+				img#scale-img.medium(src="./img/goods/pizza1-big.webp", srcset="./img/goods/pizza1-big@2x.webp 2x" width="550" height="550" alt="img")
 			.container.gap-20
 				.popup-body__header
 					.h5 Пицца “Особая”
@@ -129,7 +129,7 @@
 		.container.gap-20
 			.counter-wrapper
 				.counter-wrapper__group
-					p.txt-bold Количество:
+					span.txt-bold Количество:
 					+counter
 				.counter-wrapper__group
 					p.txt-grey Вес: 550 гр.

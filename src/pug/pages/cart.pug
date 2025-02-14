@@ -1,0 +1,158 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header
+		.header-content
+			a(href="index.html").btn-back
+			.h2-up Корзина
+	//MAIN
+	main.main.bg-grey
+		.container
+			.cart-page-body.wrapper-gap-20
+				//КАРТОЧКА
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Пицца “Маргарита”
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+				
+				
+				//КАРТОЧКА COMBI
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/chiken1.webp", srcset="./img/goods/chiken1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Чикен бокс
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+								
+								.cart-set-item
+									p.txt-14 Куриные наггетсы
+									p 1 шт
+								.cart-set-item
+									p.txt-14 Картофель фри
+									p Стандартная, 80 г
+								.cart-set-item
+									p.txt-14 Соус Сырный
+									p 1 шт, 25 г
+							
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+				
+	//FOOTER
+	footer.footer
+		.container
+			.footer-content
+				p.h11 Корзина
+				.cart-preview
+					.cart-preview__img
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
+						
+					.cart-preview__count.flex-center
+						span.h11 7
+				a(href="cart.html").btn-open-cart
+
+			
+	//PROFILE FRAME открывается по клику на БУРГЕР
+	.profile-menu-wrapper#profile-menu
+		//HEADER
+		.header
+			.container
+				.header-content
+					button(type="button").btn-close#close-profile-menu
+					.h2-up Профиль
+		//BODY
+		.profile-menu-body
+			.container
+				.profile-header
+					.profile-header__avatar
+						img(src="./img/avatar.webp",  srcset="./img/avatar@2x.webp 2x" alt="avatar")
+					.profile-header__text
+						.h5 Ульяна
+						a.txt-grey(href="#!") info@internet-step.com
+					.profile-header__btn
+						button.btn-out
+							svg.svg-out
+								use(href='./img/sprite.svg#svg-out')
+			
+				.profile-menu
+					.li
+						svg.li-icon.svg-menu
+							use(href='./img/sprite.svg#svg-menu')
+						.h8 Меню
+					.li
+						svg.li-icon.svg-cart
+							use(href='./img/sprite.svg#svg-cart')
+						.h8 Корзина
+						span.notify-item 4
+					.li
+						svg.li-icon.svg-list
+							use(href='./img/sprite.svg#svg-list')
+						.h8 История заказа
+						span.notify-item 44
+					.li
+						svg.li-icon.svg-star
+							use(href='./img/sprite.svg#svg-star')
+						.h8 Избранное
+						span.notify-item 7
+					.li
+						svg.li-icon.svg-discount
+							use(href='./img/sprite.svg#svg-discount')
+						.h8 Бонусы
+					.li
+						svg.li-icon.svg-info
+							use(href='./img/sprite.svg#svg-info')
+						.h8 О нас
+					.li
+						svg.li-icon.svg-doc
+							use(href='./img/sprite.svg#svg-doc')
+						.h8 Наша политика
+					
+					.li.li-delete-profile
+						svg.li-icon.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+						.h8 Удалить аккаунт
+		//FOOTER
+		.footer
+			.container
+				.footer-content.flex-center
+					a.h11.txt-s3.flex(href="#!") Войти как курьер
+						svg.svg-login
+							use(href='./img/sprite.svg#svg-login')
+
+	
+	//additional products
+	//- include ../sections/_add-product-modal
+block variables
+	-var title = "Pizza Mega Magic";

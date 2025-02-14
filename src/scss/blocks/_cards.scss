@@ -186,3 +186,6 @@
 	.add-product{height: 100%;}
 }
 .hide-card,.hide-item{display: none!important;}
+*.align-left .product__body{
+	text-align: left;
+}

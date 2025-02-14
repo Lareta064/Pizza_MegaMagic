@@ -263,3 +263,35 @@ document.addEventListener("DOMContentLoaded", function () {
       input.dispatchEvent(new Event("change"));
   });
 });
+// SWIPE CART ITEM
+document.addEventListener("DOMContentLoaded", function () {
+  const cartItems = document.querySelectorAll(".cart-item-group");
+
+  cartItems.forEach((itemGroup) => {
+      let startX = 0;
+      let currentX = 0;
+      let isSwiped = false;
+      const swipeThreshold = 50; // Минимальная дистанция свайпа
+
+      itemGroup.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isSwiped = itemGroup.classList.contains("swiped");
+      });
+
+      itemGroup.addEventListener("touchmove", (e) => {
+          currentX = e.touches[0].clientX;
+      });
+
+      itemGroup.addEventListener("touchend", () => {
+          const diffX = startX - currentX;
+
+          if (diffX > swipeThreshold) {
+              // Свайп влево — показываем кнопку
+              itemGroup.classList.add("swiped");
+          } else if (diffX < -swipeThreshold) {
+              // Свайп вправо — возвращаем обратно
+              itemGroup.classList.remove("swiped");
+          }
+      });
+  });
+});
