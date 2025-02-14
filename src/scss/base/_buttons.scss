@@ -146,7 +146,7 @@
 input.btn{width: fit-content;}
 .btn-favor input:checked + svg{color: $a1;}
 .show-add-product>*{pointer-events: none;}
-.show-add-product{color: $p;}
+.show-add-product, .show-all-product{color: $p;}
 .w-100{width:100%!important;}
 .filter-label{
 	border-radius: 100px;

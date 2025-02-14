@@ -131,5 +131,8 @@
     overflow-y: auto;
     height: calc(100vh - 215px);
     padding-bottom: 20px;
-	&.bg-grey{padding-top: 20px; padding-bottom: 0;}
+	&.bg-grey{
+		padding-top: 20px; 
+		// padding-bottom: 0;
+	}
 }
