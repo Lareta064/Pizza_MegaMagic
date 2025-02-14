@@ -2,7 +2,7 @@
 .modal-frame(data-modal="cart-page")
 	header.header
 		.header-content
-			a(href="index.html").btn-back
+			a(href="#!" data-close).btn-back
 			.h2-up Корзина
 	
 	//MAIN
@@ -103,9 +103,24 @@
 
 	//RECOMMEND PRODUCTS POPUP открывается по клику на кнопку на карточке .recommend-card
 	.recommend-modal.modal-frame.modal-frame--downUp(data-modal="recommend")
-		
-		.header-content
-			button.btn-close-dark.btn-abs(data-close)
-			.header-title
-				.h10 Напитки к вашему заказу:
-				
+		.recommend-modal-body.gap-20
+			.header-content
+				button.btn-close-dark(data-close)
+				.header-title
+					.h10 Напитки к вашему<br>заказу:
+
+			.recommend-content.gap-12
+				.recommend-card
+					.card-img
+						img(src="./img/goods/juice2.webp", srcset="./img/goods/juice2@2x.webp 2x" width="80" height="80" alt="img")
+					.card-txt
+						p Напитки
+					button(type="button" ).btn-light Выбрать
+				.recommend-card
+					.card-img
+						img(src="./img/goods/juice3.webp", srcset="./img/goods/juice3@2x.webp 2x" width="80" height="80" alt="img")
+					.card-txt
+						p Напитки
+					button(type="button" ).btn-light Выбрать
+
+

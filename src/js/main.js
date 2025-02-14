@@ -127,10 +127,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for(let item of modalOpen){
       item.addEventListener('click', function(e){
-        for(let item of  modalFrames){
-          item.classList.remove('visible');
-          bodyEl.classList.remove('lock');
-        }
+        // for(let item of  modalFrames){
+        //   item.classList.remove('visible');
+        //   bodyEl.classList.remove('lock');
+        // }
         e.preventDefault();
         const itemAttr = item.getAttribute('data-btn');
 
