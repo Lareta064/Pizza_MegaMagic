@@ -181,8 +181,12 @@
 }
 .add-products-group{
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(12, 1fr);
+
 	gap:12px;
+	.add-product-card{
+		grid-column: span 4;
+	}
 	.add-product{height: 100%;}
 }
 .hide-card,.hide-item{display: none!important;}

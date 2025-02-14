@@ -4,6 +4,9 @@
 	.header-content{justify-content: center;text-align: center;position: relative;}
 	.header-title{
 		max-width: 250px; 
+		@media (max-width: 424px) {
+		padding-left: 10px;
+		}
 	}
 }
 .header.popup-header{
