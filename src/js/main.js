@@ -124,7 +124,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+    /*DELIVERY HIDE FIELDS */
+    const deliverySwitch = document.querySelector('#switch-delivery');
+    if(deliverySwitch){
+      deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
+      deliverySwitchLabels.forEach((swtch)=>{
 
+        swtch.addEventListener('click', ()=>{
+         
+          const thisInputRadio = swtch.querySelector('[type="radio"]');
+          const hideDeliveryFields = document.querySelector('#delivery-courier-fields');
+          if(swtch.classList.contains('delivery-courier')){
+            if(thisInputRadio.checked){hideDeliveryFields.classList.add('filds-visible')}
+          }else{
+            hideDeliveryFields.classList.remove('filds-visible')
+          }
+        });
+      });
+    }
     // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');

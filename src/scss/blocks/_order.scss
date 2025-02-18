@@ -200,3 +200,9 @@
 	display: flex;
 	column-gap:10px;
 }
+#delivery-courier-fields{
+	height: 0;
+	overflow: hidden;
+	transition: .3s; 
+	&.filds-visible{height: 150px;}
+}
