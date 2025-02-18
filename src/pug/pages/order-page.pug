@@ -1,0 +1,84 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//HEADER
+	header.header
+		.container
+			.header-content
+				button(type="button").btn-back
+				.h2-up Оформить
+	//MAIN
+	main.main
+		.container
+			.wrapper-gap-20
+				.order-card
+					.order-header
+						p.h11 Сумма заказа
+						p.h11 1675&nbsp;&#8381;
+					.order-body
+						.order-body__address
+							.h11 Доставка
+							a.h11.txt-s5(href="#!") Укажите адрес
+					
+						p.txt-12.txt-s5 Бесплатная доставка за заказ от 550₽. Если стоимость заказа ниже, то взимаем 335₽.
+					.order-footer
+						p.h5 Сумма заказа
+						p.h5 1675&nbsp;&#8381;
+				form.order-form.wrapper-gap-20(action="" method="method")
+					.form-item.error
+						input(type="text" placeholder="Имя" name="name")
+						p Заполните поле
+					.form-item
+						input(type="text" value="info@internet-step.com" name="email")
+					
+					.content-group
+						.h10 Выбрать
+						.form-item&attributes(attributes)
+							.dropdown
+								button.dropdown__button(type="button") Понедельник
+								.dropdown__list
+									ul
+										li.dropdown__list-item.selected(data-value="Понедельник") Понедельник
+										li.dropdown__list-item(data-value="Вторник") Вторник
+										li.dropdown__list-item(data-value="Среда") Среда
+										li.dropdown__list-item(data-value="Четверг") Четверг
+										li.dropdown__list-item(data-value="Пятница") Пятница
+										li.dropdown__list-item(data-value="Суббота") Суббота
+										li.dropdown__list-item(data-value="Воскресенье") Воскресенье
+								//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+								input.dropdown__input-hidden(type="hidden", name=""+ inpName)
+
+					.form-item
+						input(type="tel" value="89654735344" name="phone")
+					//выбор доставки
+					.switch-group.switch-delivery
+						label.switch-label#delivery-courier
+							input(type="radio" name="delivery__type" )
+							span.switch-btn Доставка курьером
+						label.switch-label
+							input(type="radio" name="delivery__type" checked)
+							span.switch-btn Самовывоз
+
+					//Поля отображаются при выборе доставки курьером
+					#delivery-courier-fields.wrapper-gap-20
+						.note-box
+							.card-img
+								svg.svg-note
+									use(href='./img/sprite.svg#svg-note')
+							.txt-12.txt-s5 Минимальный заказ для бесплатной доставки 500 руб. Время доставки от 40 мин.
+						
+						a(href="#!").btn-light.w-100
+							span Выбрать
+							svg.svg-plus
+								use(href='./img/sprite.svg#svg-plus')
+					
+					.content-group
+						.h10 Заметки
+						.form-item
+							input( type="text" name="message" placeholder="Комментарий к заказу")
+	//FOOTER			
+	footer.footer
+		.container
+			.footer-content
+			
