@@ -184,28 +184,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const showAddProducts = document.querySelector('#show-addProducts');
     const addProductsModal = document.querySelector('#addProducts');
     const closeAddProductsModal = document.querySelector('#close-addProducts');
-    
-    showAddProducts.addEventListener('click', ()=>{
-      addProductsModal.classList.add('visible');
-    });
-    closeAddProductsModal.addEventListener('click', ()=>{
-      addProductsModal.classList.remove('visible');
-    });
+    if(showAddProducts){
 
-    /*btn-close-click */
-    const parentsBtnClose = document.querySelectorAll('.parent-close-btn');
-   
-    if(parentsBtnClose.length > 0){
-      parentsBtnClose.forEach((parent)=>{
-        const parentBtn = parent.querySelector('.btn-close-dark');
-       
-        if(parentBtn){
-          parentBtn.addEventListener('click', ()=>{
-            console.log('click');
-            parent.classList.remove('visible');
+      showAddProducts.addEventListener('click', ()=>{
+        addProductsModal.classList.add('visible');
+      });
+      closeAddProductsModal.addEventListener('click', ()=>{
+        addProductsModal.classList.remove('visible');
+      });
+
+    }
+    /*btn RESET*/
+    const hasResetInput = document.querySelectorAll('.has-reset');
+    if(hasResetInput.length > 0){
+      hasResetInput.forEach((el)=>{
+        const resetBtn = el.querySelector('.btn-reset');
+        if( resetBtn){
+          resetBtn.addEventListener('click',()=>{
+            const inputItem =el.querySelector('INPUT');
+            const textItem = el.querySelector('.address-field')
+            if(textItem){ textItem.innerHTML ='';}
+            if(inputItem){ nputItem.value ='';}
           });
         }
-
       });
     }
     /*PIZZA SIZE */

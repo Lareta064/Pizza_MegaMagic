@@ -202,7 +202,7 @@ block content
 							use(href='./img/sprite.svg#svg-star')
 						.h8 Избранное
 						span.notify-item 7
-					.li
+					.li(data-btn="bonus")
 						svg.li-icon.svg-discount
 							use(href='./img/sprite.svg#svg-discount')
 						.h8 Бонусы
@@ -227,6 +227,29 @@ block content
 						svg.svg-login
 							use(href='./img/sprite.svg#svg-login')
 
+	
+	
+	// popup BONUS
+	.modal-frame.modal-frame--bonus(data-modal="bonus")
+		header.header
+			.container
+				.header-content
+					a(href="#!" data-close).btn-back
+					.h2-up Бонусы
+		
+		.popup-body
+			.container.gap-20
+				.bonus-item.bonus-item--accent
+					.h5 Всего бонусов:
+					.bonus-label.h2 102894
+				.bonus-item
+					.h5 Начальный уровень:
+					.bonus-label.h2 10%
+				.bonus-item
+					.h5 Всего заказов:
+					.bonus-label.h2 5
+	
+	
 	//PIZZA POPUP
 	include ../sections/_product-modal
 	//COMBO POPUP

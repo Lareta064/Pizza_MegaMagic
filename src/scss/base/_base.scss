@@ -50,7 +50,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	&>*{width: 100%;}
-	@media (max-width: 424px) {
+	@media (max-width: 399px) {
 		font-size: 13px;
 	}
 }

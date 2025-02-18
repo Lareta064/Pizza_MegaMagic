@@ -26,9 +26,10 @@
 	background-color: $a1;
 	border-color:$a1;
 	color: white;
-	&:hover{
+	&:hover, &:focus{
 		background-color: $a4;
 		border-color:$a4;
+		color: white;
 
 	}
 }
@@ -36,7 +37,7 @@
 	background-color: transparent;
 	border-color:$p;
 	
-	&:hover{
+	&:hover, &:focus{
 		background-color: $a2;
 		border-color:$a2;
 
