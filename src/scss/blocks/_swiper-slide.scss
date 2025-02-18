@@ -1,0 +1,27 @@
+.swiper-modal{
+	position: fixed;
+	inset:0;
+	background-color: rgba(0,0,0, .5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.swiper-slide{
+		width: 300px!important;
+	}
+	.test-slide{
+		height: 300px;
+		border:2px solid red;
+		border-radius: 20px;
+	}
+}
+.swiper-modal-container{
+	background-color: #fff;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.swiper-modal-content{
+	overflow: hidden;
+	width: calc(50% + 50vw);
+	
+}

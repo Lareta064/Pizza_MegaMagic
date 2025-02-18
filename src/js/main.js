@@ -14,7 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
     });
-    
+   
+		const mySwiper = new Swiper('.mySwiper',{
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+      pagination: {
+        el: "mySwiper-pagination",
+        type: "fraction",
+      },
+		});
     /*COUNTER */
     const counters = document.querySelectorAll('.counter');
     // Перебираем каждый блок счетчика
