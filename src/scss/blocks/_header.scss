@@ -11,6 +11,7 @@
 	position: sticky;
 	top:0;
 	z-index: 5;
+	flex-shrink: 0;
 	&-content{width: 100%;}
 	@media (max-width: 374px) {
 		padding-left: 10px;

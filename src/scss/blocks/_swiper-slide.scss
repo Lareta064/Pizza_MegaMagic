@@ -6,17 +6,19 @@
     background: rgba(31, 31, 31, 0.7);
 	display: flex;
 	justify-content: center;
-	// align-items: center;
+	align-items: center;
 	z-index: 10;
 	padding-top: 120px;
 	padding-bottom: 120px;
 	overflow: hidden;
+	@media (max-width: 376px) {
+		padding-top: 120px;
+		padding-bottom: 20px;
+	}
 	.swiper-slide{
 		width: 328px!important;
 		display: flex;
-		@media (max-width: 399px) {
-			width: 328px!important;
-		}
+		
 	}
 	.mySwiper-pagination{
 		font-weight: 700;
@@ -54,6 +56,19 @@
 	padding-left: 0;
 	padding-right: 0;
 	
+	.card-img{
+		flex-shrink: 0;
+		height: 203px;
+		padding: 20px;
+		padding-bottom: 0;
+		img{
+			
+			border-radius: 20px;
+			object-fit: cover;
+			object-position: center;
+		}
+		
+	}
 }
 
 .parent-close-btn{
@@ -69,6 +84,9 @@
 	display: flex;
 	padding-left: 0;
 	padding-right: 0;
+	@media (max-width: 376px) {
+	max-height: calc(100vh - 180px);
+	}
 }
 .swiper-modal-content{
 	

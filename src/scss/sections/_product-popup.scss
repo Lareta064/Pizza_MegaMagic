@@ -103,6 +103,8 @@
 	overflow: hidden;
 	transform: translateX(110%);
 	transition: .6s;
+	display: flex;
+	flex-direction: column;
 	&.visible{
 		transform: translateX(0);
 	}
@@ -133,7 +135,10 @@
     overflow: hidden;
     overflow-y: auto;
     height: calc(100vh - 215px);
-    padding-bottom: 20px;
+    height: calc(100vh - 180px);/*изменено из-за стр пиццы полукругом*/
+    // padding-bottom: 20px;
+	position: relative;
+	z-index: 1;
 	&.bg-grey{
 		padding-top: 20px; 
 		// padding-bottom: 0;

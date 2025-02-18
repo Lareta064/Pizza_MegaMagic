@@ -48,6 +48,7 @@ footer.footer{
 	left: 0;
 	right: 0;
 	z-index: 5;
+	flex-shrink: 0;
 	.flex-between{column-gap:24px;}
 }
 .footer.footer--white{
