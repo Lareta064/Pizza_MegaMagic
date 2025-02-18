@@ -24,7 +24,7 @@ span.check-icon{
 	width: 180px;
 	height: 90px;
 }
-.svg-cross, .svg-out,.svg-reload, .svg-menu,.svg-cart, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc, .svg-favor, .svg-share,.svg-explore{
+.svg-cross, .svg-out,.svg-reload, .svg-menu,.svg-cart, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc, .svg-favor, .svg-share,.svg-explore, .svg-plus{
 	color: $p;
 	display: inline-block;
 }
@@ -42,3 +42,19 @@ span.check-icon{
 	height: 32px;
 }
 .svg-reload{width:23px; height:22px;}
+.svg-wallet, .svg-note, .svg-alarm, .svg-flag, .svg-assig, .svg-trolley{
+	width: 24px;
+	height: 24px;
+	display: block;
+	flex-shrink: 0;
+	color: #ffdd9a;
+}
+.svg-plus, .svg-note {
+	width: 20px;
+	height: 20px;
+}
+.svg-alarm,.svg-flag, .svg-assig, .svg-trolley{
+	width: 29px;
+	height: 29px;
+	color: #BFBFBF;
+}

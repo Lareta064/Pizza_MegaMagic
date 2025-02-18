@@ -1,0 +1,107 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				
+				h3 Оформление
+				.order-card
+					.order-header
+						p.h11 Сумма заказа
+						p.h11 1675&nbsp;&#8381;
+					.order-body
+						.order-body__address
+							.h11 Доставка
+							a.h11.txt-s5(href="#!") Укажите адрес
+					
+						p.txt-12.txt-s5 Бесплатная доставка за заказ от 550₽. Если стоимость заказа ниже, то взимаем 335₽.
+					.order-footer
+						p.h5 Сумма заказа
+						p.h5 1675&nbsp;&#8381;
+				
+				h3 Оплата
+					.payment-types.switch-group
+						label.switch-label
+							input(type="radio" name="pay_type" checked)
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Оплата наличными
+								.payment_img
+									img(src="../img/payment/pay1.webp", width="40" alt="img")
+						
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Картой онлайн
+								.payment_img
+									img(src="../img/payment/pay2.webp", width="40" alt="img")
+									img(src="../img/payment/pay3.webp", width="40" alt="img")
+									img(src="../img/payment/pay4.webp", width="40" alt="img")
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Картой курьеру
+								.payment_img
+									img(src="../img/payment/pay2.webp", width="40" alt="img")
+									img(src="../img/payment/pay3.webp", width="40" alt="img")
+									img(src="../img/payment/pay4.webp", width="40" alt="img")
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 СБП
+								.payment_img
+									img(src="../img/payment/pay5.webp", width="40" alt="img")
+
+				h3 Order steps
+				.order-steps
+					.step-item-wrapper.step-done
+						.step-item
+							.step-icon
+								svg.svg-assig
+									use(href='../img/sprite.svg#svg-assig')
+							.txt-12 Оформлен
+					.step-item-wrapper
+						.step-item
+							.step-icon
+								svg.svg-alarm
+									use(href='../img/sprite.svg#svg-alarm')
+							.txt-12 Подготовка
+					.step-item-wrapper
+						.step-item
+							.step-icon
+								svg.svg-trolley
+									use(href='../img/sprite.svg#svg-trolley')
+							.txt-12 Отправка
+					.step-item-wrapper
+						.step-item
+							.step-icon
+								svg.svg-flag
+									use(href='../img/sprite.svg#svg-flag')
+							.txt-12 Доставлен
