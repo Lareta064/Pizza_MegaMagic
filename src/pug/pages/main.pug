@@ -155,8 +155,10 @@ block content
 						
 					.cart-preview__count.flex-center
 						span.h11 7
-				a(href="#!" data-btn="cart-page").btn-open-cart
-
+				//- кнопка Корзины на popUp, который закомментирован на строке 235
+				//- a(href="#!" data-btn="cart-page").btn-open-cart
+				//- кнопка Корзины на отдельную страницу
+				a(href="cart.html").btn-open-cart
 			
 	//PROFILE FRAME открывается по клику на БУРГЕР
 	.profile-menu-wrapper#profile-menu
@@ -230,7 +232,7 @@ block content
 	//COMBO POPUP
 	include ../sections/_combo-modal
 	//Корзина
-	include ../sections/_cart-popup
+	//- include ../sections/_cart-popup
 
 block variables
 	-var title = "Pizza Mega Magic";

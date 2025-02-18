@@ -72,13 +72,61 @@ block content
 							span Выбрать
 							svg.svg-plus
 								use(href='./img/sprite.svg#svg-plus')
-					
+					//Заметки
 					.content-group
 						.h10 Заметки
 						.form-item
 							input( type="text" name="message" placeholder="Комментарий к заказу")
+					
+					//Способы оплаты
+					.payment-group.gap-12
+						.h5 Способы оплаты
+						.payment-types.switch-group
+							label.switch-label
+								input(type="radio" name="pay_type" checked)
+								span.payment-item
+									.payment-icon
+										svg.svg-wallet
+											use(href='../img/sprite.svg#svg-wallet')
+									p.txt-12 Оплата наличными
+									.payment_img
+										img(src="../img/payment/pay1.webp", width="40" alt="img")
+							
+							label.switch-label
+								input(type="radio" name="pay_type")
+								span.payment-item
+									.payment-icon
+										svg.svg-wallet
+											use(href='../img/sprite.svg#svg-wallet')
+									p.txt-12 Картой онлайн
+									.payment_img
+										img(src="../img/payment/pay2.webp", width="40" alt="img")
+										img(src="../img/payment/pay3.webp", width="40" alt="img")
+										img(src="../img/payment/pay4.webp", width="40" alt="img")
+							label.switch-label
+								input(type="radio" name="pay_type")
+								span.payment-item
+									.payment-icon
+										svg.svg-wallet
+											use(href='../img/sprite.svg#svg-wallet')
+									p.txt-12 Картой курьеру
+									.payment_img
+										img(src="../img/payment/pay2.webp", width="40" alt="img")
+										img(src="../img/payment/pay3.webp", width="40" alt="img")
+										img(src="../img/payment/pay4.webp", width="40" alt="img")
+							label.switch-label
+								input(type="radio" name="pay_type")
+								span.payment-item
+									.payment-icon
+										svg.svg-wallet
+											use(href='../img/sprite.svg#svg-wallet')
+									p.txt-12 СБП
+									.payment_img
+										img(src="../img/payment/pay5.webp", width="40" alt="img")
+
+					
 	//FOOTER			
-	footer.footer
+	footer.footer.footer--white
 		.container
-			.footer-content
+			a(href="#!").btn-accent.w-100 Сделать заказ
 			

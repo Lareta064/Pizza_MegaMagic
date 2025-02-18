@@ -7,8 +7,8 @@ block content
 			a(href="index.html").btn-back
 			.h2-up Корзина
 	//MAIN
-	main.main.bg-grey
-		.container
+	main.main.bg-grey.gap-20
+		.container.gap-20
 			.cart-page-body.wrapper-gap-20
 				//КАРТОЧКА
 				.cart-item-group
@@ -28,7 +28,30 @@ block content
 							.counter-wrapper__group
 								span.txt-14.txt-red Изменить:
 								+counter-grey
-					
+					//Кнопка удаления товара  по свайпу влево
+					button.swipe-btn
+						svg.svg-delete
+							use(href='./img/sprite.svg#svg-delete')
+				
+				//КАРТОЧКА
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Пицца “Маргарита”
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					//Кнопка удаления товара  по свайпу влево
 					button.swipe-btn
 						svg.svg-delete
 							use(href='./img/sprite.svg#svg-delete')
@@ -63,95 +86,87 @@ block content
 							.counter-wrapper__group
 								span.txt-14.txt-red Изменить:
 								+counter-grey
-					
+					//Кнопка удаления товара по свайпу влево
 					button.swipe-btn
 						svg.svg-delete
 							use(href='./img/sprite.svg#svg-delete')
-				
 			
-	
-	//FOOTER
-	footer.footer
+		.recommend
+			.container.gap-12
+				.h5 Рекомендуем к вашему заказу
+				.recommend-wrapper
+					.recommend-card
+						.card-img
+							img(src="./img/goods/juice6.webp", srcset="./img/goods/juice6@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Напитки
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Соусы
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/juice6.webp", srcset="./img/goods/juice6@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Напитки
+						button(type="button" data-btn="recommend").btn-light Выбрать
+					.recommend-card
+						.card-img
+							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="80" height="80" alt="img")
+						.card-txt
+							p Соусы
+						button(type="button" data-btn="recommend").btn-light Выбрать
+		//BONUS
 		.container
-			.footer-content
-				p.h11 Корзина
-				.cart-preview
-					.cart-preview__img
-						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
-						
-					.cart-preview__count.flex-center
-						span.h11 7
-				a(href="cart.html").btn-open-cart
-
-			
-	//PROFILE FRAME открывается по клику на БУРГЕР
-	.profile-menu-wrapper#profile-menu
-		//HEADER
-		.header
-			.container
-				.header-content
-					button(type="button").btn-close#close-profile-menu
-					.h2-up Профиль
-		//BODY
-		.profile-menu-body
-			.container
-				.profile-header
-					.profile-header__avatar
-						img(src="./img/avatar.webp",  srcset="./img/avatar@2x.webp 2x" alt="avatar")
-					.profile-header__text
-						.h5 Ульяна
-						a.txt-grey(href="#!") info@internet-step.com
-					.profile-header__btn
-						button.btn-out
-							svg.svg-out
-								use(href='./img/sprite.svg#svg-out')
-			
-				.profile-menu
-					.li
-						svg.li-icon.svg-menu
-							use(href='./img/sprite.svg#svg-menu')
-						.h8 Меню
-					.li
-						svg.li-icon.svg-cart
-							use(href='./img/sprite.svg#svg-cart')
-						.h8 Корзина
-						span.notify-item 4
-					.li
-						svg.li-icon.svg-list
-							use(href='./img/sprite.svg#svg-list')
-						.h8 История заказа
-						span.notify-item 44
-					.li
-						svg.li-icon.svg-star
-							use(href='./img/sprite.svg#svg-star')
-						.h8 Избранное
-						span.notify-item 7
-					.li
-						svg.li-icon.svg-discount
-							use(href='./img/sprite.svg#svg-discount')
-						.h8 Бонусы
-					.li
-						svg.li-icon.svg-info
-							use(href='./img/sprite.svg#svg-info')
-						.h8 О нас
-					.li
-						svg.li-icon.svg-doc
-							use(href='./img/sprite.svg#svg-doc')
-						.h8 Наша политика
+			.bonus-block.gap-20.pb-80
+				.flex
+					.form-item
+						input(type="text" placeholder="Введите промокод")
+					a(href="#!").btn Применить
+				.flex
+					.form-item
+						input(type="text" placeholder="Сколько бонусов списать")
+						p.txt-14.mt-6 Доступно бонусов: 103251
 					
-					.li.li-delete-profile
-						svg.li-icon.svg-delete
-							use(href='./img/sprite.svg#svg-delete')
-						.h8 Удалить аккаунт
-		//FOOTER
-		.footer
-			.container
-				.footer-content.flex-center
-					a.h11.txt-s3.flex(href="#!") Войти как курьер
-						svg.svg-login
-							use(href='./img/sprite.svg#svg-login')
+					a(href="#!").btn Применить
+		
+	//POPUP FOOTER
+	footer.footer.footer--white.popUp-footer
+		.container
+			//TOTAL SUMM
+			.total-price-wrapper
+				.container
+					.total-price
+						.h3 Заказ
+						p 4 шт. на сумму
+						.price-block 1625&nbsp;#[span &#8381;]
+			
+			a.btn-accent.w-100(href="order-page.html") Оформить
+
+	//RECOMMEND PRODUCTS POPUP открывается по клику на кнопку на карточке .recommend-card
+	.recommend-modal.modal-frame.modal-frame--downUp(data-modal="recommend")
+		.recommend-modal-body.gap-20
+			.header-content
+				button.btn-close-dark(data-close)
+				.header-title
+					.h10 Напитки к вашему<br>заказу:
+
+			.recommend-content.gap-12
+				.recommend-card
+					.card-img
+						img(src="./img/goods/juice2.webp", srcset="./img/goods/juice2@2x.webp 2x" width="80" height="80" alt="img")
+					.card-txt
+						p Пепси-Кола
+					span.btn-light 80 &#8381;
+				.recommend-card
+					.card-img
+						img(src="./img/goods/juice3.webp", srcset="./img/goods/juice3@2x.webp 2x" width="80" height="80" alt="img")
+					.card-txt
+						p Фанта
+					span.btn-light 120 &#8381;
 
 	
 	//additional products
