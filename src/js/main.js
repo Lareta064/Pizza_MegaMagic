@@ -336,4 +336,16 @@ document.addEventListener("DOMContentLoaded", function () {
           }
       });
   });
+  /* Рекомендуемые товары ценв/счетчик */
+  const recommendGoodsBtn = document.querySelectorAll('.recommend-card__btn');
+  if(recommendGoodsBtn.length > 0){
+    recommendGoodsBtn.forEach((item)=>{
+      const priceItem = item.querySelector('.btn-light.active');
+      const priceCounter = item.querySelector('.counter');
+      priceItem.addEventListener('click', ()=>{
+        priceItem.classList.remove('active');
+        priceCounter.classList.add('active');
+      });
+    });
+  }
 });

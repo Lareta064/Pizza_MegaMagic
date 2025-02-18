@@ -65,6 +65,31 @@
 	.header-content{text-align: center; max-width:230px; margin-inline: auto; justify-content: center; }
 	
 }
+.recommend-card__btn{
+	width: 130px;
+	height: 54px;
+	position: relative;
+	// border: 1px solid $p;
+	background-color: $s2;
+	border-radius: 100px;
+	.btn-light{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		z-index: -1;
+		background-color: #fff;
+	}
+	.btn-light.active{opacity: 1;z-index:2}
+	.counter{
+		height: 54px;
+		.counter-minus, .counter-plus{height: 54px; width: 40px; justify-content: center; padding-left: 10px;padding-right: 10px;}
+		.counter-value{border:0; height: 54px; flex-grow: 1;}
+		
+	}
+}
 .recommend-modal-body .recommend-content{
 	max-height: calc(100vh - 205px);
 	min-height: 280px;
