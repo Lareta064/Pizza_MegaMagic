@@ -71,9 +71,10 @@
 		}
 	}
 	&__img.p-10{
-		padding: 10px;
+		padding-inline: 10px;
+		padding-top: 0!important;
 		padding-bottom: 0;
-		img{object-fit: contain;}
+		img{object-fit: contain; object-position: top;}
 	
 	}
 	&__body{

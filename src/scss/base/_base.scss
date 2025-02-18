@@ -191,3 +191,38 @@ main{flex:1; padding-bottom: 200px; background-color: #fff;}
 	border-top: 1px solid $s1;
 
 }
+.popup-wrapper{
+	backdrop-filter: blur(16px);
+	background: rgba(31, 31, 31, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	inset:0;
+	z-index: 15;
+	flex-direction: column;
+	&>*{width: 95%; max-width: 382px;}
+	
+	.popup-small{
+		padding: 60px 24px;
+		border-radius: 20px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		row-gap:20px;
+		.flex-center{
+			width: 100%;
+			.btn-light, .btn-accent{flex:1}
+		}
+	}
+}
+.progress-ring {
+	transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+	transition: stroke-dashoffset 1s linear;
+}

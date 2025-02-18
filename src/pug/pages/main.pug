@@ -187,17 +187,17 @@ block content
 						svg.li-icon.svg-menu
 							use(href='./img/sprite.svg#svg-menu')
 						.h8 Меню
-					.li
+					a(href="cart.html").li
 						svg.li-icon.svg-cart
 							use(href='./img/sprite.svg#svg-cart')
 						.h8 Корзина
 						span.notify-item 4
-					.li
+					a(href="order-history.html").li
 						svg.li-icon.svg-list
 							use(href='./img/sprite.svg#svg-list')
 						.h8 История заказа
 						span.notify-item 44
-					.li
+					.li(data-btn="favor")
 						svg.li-icon.svg-star
 							use(href='./img/sprite.svg#svg-star')
 						.h8 Избранное
@@ -206,7 +206,7 @@ block content
 						svg.li-icon.svg-discount
 							use(href='./img/sprite.svg#svg-discount')
 						.h8 Бонусы
-					.li
+					a(href="#!" data-btn="about").li
 						svg.li-icon.svg-info
 							use(href='./img/sprite.svg#svg-info')
 						.h8 О нас
@@ -248,8 +248,100 @@ block content
 				.bonus-item
 					.h5 Всего заказов:
 					.bonus-label.h2 5
-	
-	
+	// popup Избранное
+	.modal-frame.modal-frame--favor(data-modal="favor")
+		header.header
+			.container
+				.header-content
+					a(href="#!" data-close).btn-back
+					.h2-up Избранное
+		
+		main.main
+			.container
+				.products-content.two-columns.popup-body
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza3.webp", srcset="./img/goods/pizza3@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон
+						
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+
+										a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="./img/goods/pizza3.webp", srcset="./img/goods/pizza3@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон
+
+
+	// popup О НАС
+	.modal-frame.modal-frame--about(data-modal="about")
+		header.header
+			.container
+				.header-content
+					a(href="#!" data-close).btn-back
+					.h2-up О нас
+		
+		main.main
+			.container
+				.popup-body.custom-text
+					.h5 Пицца и Роллы
+					p «Pizza and rolls»-это не просто любимая пицца, но и правильный выбор ценителей вкусной и полезной пищи! Каждый клиент, посещая заведение или выбирая наименования из меню с доставкой на дом, может быть уверен в свежести продуктов и безупречном качестве приготовленной пищи, эстетически привлекательном виде блюд и их отменных вкусовых свойствах.
+					
+					.h5 Доставка
+					p Если хочется отведать чего‑нибудь вкусного, но при этом нет ни времени, ни желания стоять у плиты, правильным решением станет доставка еды домой. Именно эту услугу предлагает клиентам наша мини-пиццерия.Наш сайт доставки еды гарантирует всем своим клиентам множество важных преимуществ, среди которых возможность совершения заказа и предзаказа в любое время, оперативная доставка к месту назначения и удобное оформление заявок. Вы также оцените привлекательную стоимость блюд, а так же их несомненное качество.
+					.h5 Бесплатная доставка еды
+					p Мы осуществляем бесплатную доставку еды на дом. Чтобы воспользоваться нашими предложением, оформите заказ стоимостью от 500 рублей. Любое выбранное вами блюдо будет в минимальные сроки доставлено в место назначения абсолютно бесплатно. Мы гарантируем не только бесплатную доставку еды, но и её безупречное качество!
+					p Мы готовим на заказ для каждого клиента, поэтому у нас всегда вкусно, свежо, ароматно! В учёт принимаются и индивидуальные вкусы. Так, любую пиццу вы можете дополнить топпингами (бекон, ветчина, креветка, шампиньоны и др.) или исключить нелюбимый продукт. Используйте для этого наш удобный фильтр по ингредиентам!
+					.h5 Делаем для вас самое вкусное!
+					p Повседневная практика показывает, что консультация с широким активом требуют от нас анализа новых предложений. Равным образом дальнейшее развитие различных форм деятельности представляет собой интересный эксперимент проверки форм развития.
+					p Равным образом реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны новая модель организационной деятельности играет важную роль в формировании форм развития. Повседневная практика показывает, что укрепление и развитие структуры в значительной степени обуславливает создание модели развития.
+					.h5 Акции и скидки
+					p Чтобы наши клиенты всегда были сытыми и довольными, мы позаботились о самых выгодных скидках и акциях, благодаря которым заказ доставки еды в нашей пиццерии станет более выгодным.
+
+
 	//PIZZA POPUP
 	include ../sections/_product-modal
 	//COMBO POPUP

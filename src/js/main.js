@@ -209,6 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+   
     /*PIZZA SIZE */
     const sizeToggleWrapper = document.querySelector('.switch-group--size');
     if(sizeToggleWrapper){
@@ -299,13 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-// активируем checked  у свитч по загрузке
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.querySelectorAll(".switch-group input:checked").forEach((input) => {
-//     console.log('123');
-//       input.dispatchEvent(new Event("change"));
-//   });
-// });
+
 // SWIPE CART ITEM
 document.addEventListener("DOMContentLoaded", function () {
   const cartItems = document.querySelectorAll(".cart-item-group");
@@ -350,3 +345,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+  /*ROUND PROGRESS */
+ 
+	document.addEventListener("DOMContentLoaded", function () {
+    const circle = document.querySelector(".progress-ring-circle");
+    
+    const duration = 5; // Время в секундах
+    const circumference = 2 * Math.PI * 30; // Длина окружности
+    let progress = 0;
+    const interval = setInterval(() => {
+        progress += 100 / duration; // Увеличиваем процент
+        const offset = circumference - (progress / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+        // progressText.textContent = `Заполнено: ${Math.round(progress)}%`;
+
+        if (progress >= 100) {
+            clearInterval(interval);
+        }
+    }, 1000);
+});
+
