@@ -133,7 +133,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 
 .header, .footer{flex-shrink: 0;}
-main{flex:1; padding-bottom: 110px; background-color: #fff;}
+main{flex:1; padding-bottom: 200px; background-color: #fff;}
 
 .flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper, .flex-link, .column-center,.filter-label,.flex-between{
 	display: flex;
@@ -175,6 +175,8 @@ main{flex:1; padding-bottom: 110px; background-color: #fff;}
 .p-10{
 	padding: 10px;
 }
+.pb-100{padding-bottom: 100px!important;}
+.pb-200{padding-bottom: 260px!important;}
 .mt-20{margin-top: 20px!important;}
 .mb-20{margin-bottom: 20px!important;}
 .mt-auto{margin-top: auto;}

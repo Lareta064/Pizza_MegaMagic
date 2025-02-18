@@ -116,11 +116,14 @@
 }
 .popup-body.scroll-y{
 	height: calc(100vh - 144px);
-	padding-bottom: 186px;
+	
 }
 .footer.popUp-footer{
 	
-	z-index: 7;
+	z-index: 10;
+	opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
 	
 }
 #addProducts.visible + .popUp-footer #show-addProducts{display: none;}

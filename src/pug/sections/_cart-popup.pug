@@ -6,7 +6,7 @@
 			.h2-up Корзина
 	
 	//MAIN
-	.popup-body.bg-grey.gap-20
+	.popup-body.bg-grey.gap-20.pb-100
 		.container
 			.cart-page-body.wrapper-gap-20
 				//КАРТОЧКА
@@ -131,16 +131,18 @@
 						p.txt-14 Доступно бонусов: 103251
 					
 					a(href="#!").btn Применить
-		//TOTAL SUMM
-		.total-price-wrapper
-			.container
-				.total-price
-					.h3 Заказ
-					p 4 шт. на сумму
-					.price-block 1625&nbsp;#[span &#8381;]
+		
 	//POPUP FOOTER
 	footer.footer.footer--white.popUp-footer
 		.container
+			//TOTAL SUMM
+			.total-price-wrapper
+				.container
+					.total-price
+						.h3 Заказ
+						p 4 шт. на сумму
+						.price-block 1625&nbsp;#[span &#8381;]
+			
 			button.btn-accent.w-100 Оформить
 
 	//RECOMMEND PRODUCTS POPUP открывается по клику на кнопку на карточке .recommend-card
