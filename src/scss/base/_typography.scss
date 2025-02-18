@@ -84,3 +84,7 @@
 
 }
 .h9{margin-bottom: 12px;}/*на главной Популярное*/
+.title-group{
+	text-align: center;
+	&>*+*{margin-top: 4px;}
+}

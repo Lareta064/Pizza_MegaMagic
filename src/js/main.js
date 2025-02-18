@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			slidesPerView: 'auto',
 			spaceBetween: 20,
       pagination: {
-        el: "mySwiper-pagination",
+        el: document.querySelector('#mySwiper-pagination'),
         type: "fraction",
       },
 		});
@@ -174,6 +174,23 @@ document.addEventListener("DOMContentLoaded", function () {
     closeAddProductsModal.addEventListener('click', ()=>{
       addProductsModal.classList.remove('visible');
     });
+
+    /*btn-close-click */
+    const parentsBtnClose = document.querySelectorAll('.parent-close-btn');
+   
+    if(parentsBtnClose.length > 0){
+      parentsBtnClose.forEach((parent)=>{
+        const parentBtn = parent.querySelector('.btn-close-dark');
+       
+        if(parentBtn){
+          parentBtn.addEventListener('click', ()=>{
+            console.log('click');
+            parent.classList.remove('visible');
+          });
+        }
+
+      });
+    }
     /*PIZZA SIZE */
     const sizeToggleWrapper = document.querySelector('.switch-group--size');
     if(sizeToggleWrapper){
@@ -265,12 +282,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // активируем checked  у свитч по загрузке
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".switch-group input:checked").forEach((input) => {
-    console.log('123');
-      input.dispatchEvent(new Event("change"));
-  });
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.querySelectorAll(".switch-group input:checked").forEach((input) => {
+//     console.log('123');
+//       input.dispatchEvent(new Event("change"));
+//   });
+// });
 // SWIPE CART ITEM
 document.addEventListener("DOMContentLoaded", function () {
   const cartItems = document.querySelectorAll(".cart-item-group");

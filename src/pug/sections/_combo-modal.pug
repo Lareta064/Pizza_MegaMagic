@@ -24,6 +24,7 @@
 				.h5 Чикен бокс
 				p.txt-14 Наш комбо-набор — это хрустящие куриные наггетсы, золотистая картошка фри и нежный сырный соус. Идеальное сочетание вкусов: сочная птица, хрустящая картошка и кремовая текстура соуса!
 			
+			
 			.combo-set.gap-12
 				a(href="#!").product.product-horiz.align-left
 					.product__img
@@ -31,7 +32,7 @@
 					.product__body
 						p.product__name Куриные наггетсы
 						p 6 шт
-						button.btn(type="button") Заменить
+						button.btn(type="button" data-btn="combo-set") Заменить
 
 				a(href="#!").product.product-horiz.align-left
 					.product__img
@@ -39,7 +40,7 @@
 					.product__body
 						p.product__name Картофель фри
 						p 1 шт
-						button.btn(type="button") Заменить
+						button.btn(type="button" data-btn="combo-set") Заменить
 				
 				a(href="#!").product.product-horiz.align-left
 					.product__img
@@ -47,7 +48,7 @@
 					.product__body
 						p.product__name Соус
 						p 1 шт
-						button.btn(type="button") Заменить
+						button.btn(type="button" data-btn="combo-set") Заменить
 				
 	
 	
@@ -57,23 +58,80 @@
 			.price-block 355 #[span &#8381;]
 			button.btn-accent.w-100 Готово
 
-	.swiper-modal
-		.swiper-modal-container
+	//СЛАЙДЕР ПО  КНОПКЕ ЗАМЕНИТЬ
+	.swiper-modal.modal-frame(data-modal="combo-set")
+		.header
+			.container
+				.header-content.flex-between
+					button.btn-close-dark(data-close)
+					#mySwiper-pagination.mySwiper-pagination
+		
+		.container.container--flex
 			.swiper-modal-content
 				.mySwiper.swiper
 					.swiper-wrapper
+						//slide
 						.swiper-slide
 							.combo-card
 								.card-img
 									img(src="./img/goods/chiken2.webp", srcset="/img/goods/chiken2@2x.webp 2x" width="328" height="203" alt="img")
-								.title-group
-									.h5 Куриные наггетсы
-									.txt-14 Нежное мясо в хрустящей панировке
-
-
-						
+								.combo-card__body
+									.title-group
+										.h5 Куриные наггетсы
+										.txt-14 Нежное мясо в хрустящей панировке
+									.switch-group.mt-auto
+										label.switch-label
+											input(type="radio" name="combo_item1")
+											span.switch-btn 6шт
+										label.switch-label
+											input(type="radio" name="combo_item1" checked)
+											span.switch-btn 10шт
+								
+								.footer.footer--white
+									.container.flex-center
+										a(href="#!").btn-light.w-100 Уже в комбо
+						//slide
 						.swiper-slide
-							.test-slide
-					.mySwiper-pagination
+							.combo-card
+								.card-img
+									img(src="./img/goods/chiken2.webp", srcset="/img/goods/chiken2@2x.webp 2x" width="328" height="203" alt="img")
+								.combo-card__body
+									.title-group
+										.h5 Куриные кусочки
+										.txt-14 Сочные кусочки куриного филе в золотистой корочке
+									.switch-group.mt-auto
+										label.switch-label
+											input(type="radio" name="combo_item2")
+											span.switch-btn Стандартная
+										label.switch-label
+											input(type="radio" name="combo_item2" checked)
+											span.switch-btn Большая
+								
+								.footer.footer--white
+									.container.flex-between
+										.price-block 355 #[span &#8381;]
+										button.btn-accent.w-100(data-close) Готово
+						//slide
+						.swiper-slide
+							.combo-card
+								.card-img
+									img(src="./img/goods/chiken1.webp", srcset="/img/goods/chiken1@2x.webp 2x" width="328" height="203" alt="img")
+								.combo-card__body
+									.title-group
+										.h5 Куриные кусочки
+										.txt-14 Сочные кусочки куриного филе в золотистой корочке
+									.switch-group.mt-auto
+										label.switch-label
+											input(type="radio" name="combo_item3")
+											span.switch-btn Стандартная
+										label.switch-label
+											input(type="radio" name="combo_item3" checked)
+											span.switch-btn Большая
+								
+								.footer.footer--white
+									.container.flex-between
+										.price-block 255 #[span &#8381;]
+										button.btn-accent.w-100(data-close) Готово
+					
 	
 	
