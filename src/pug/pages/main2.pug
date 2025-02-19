@@ -21,7 +21,7 @@ block content
 						input.dropdown__input-hidden(type="hidden", name="lang")
 					
 					//PROFILE BTN
-					button.btn-profile
+					a(href="index.html").btn-profile
 						img(src="./img/profile.webp", srcset="./img/profile@2x.webp 2x" width="66" height="66"  alt="img")
 	//MAIN
 	main.main
@@ -43,14 +43,14 @@ block content
 				sectiion.products
 					//categories
 					.cat-wrapper.two-columns
-						+catCard-flex-ui(1,'Пицца')
-						+catCard-flex-ui(2,'Роллы')
-						+catCard-flex-ui(3,'Бургеры')
-						+catCard-flex-ui(4,'Закуски')
-						+catCard-flex-ui(5,'Напитки')
-						+catCard-flex-ui(6,'Десерты')
-						+catCard-flex-ui(7,'Салаты')
-						+catCard-flex-ui(8,'Наборы')
+						+catCard-flex(1,'Пицца')
+						+catCard-flex(2,'Роллы')
+						+catCard-flex(3,'Бургеры')
+						+catCard-flex(4,'Закуски')
+						+catCard-flex(5,'Напитки')
+						+catCard-flex(6,'Десерты')
+						+catCard-flex(7,'Салаты')
+						+catCard-flex(8,'Наборы')
 	
 	//FOOTER
 	footer.footer
@@ -128,7 +128,7 @@ block content
 		.footer
 			.container
 				.footer-content.flex-center
-					a.h11.txt-s3.flex(href="#!") Войти как курьер
+					a.h11.txt-s3.flex(href="curier-autorize.html") Войти как курьер
 						svg.svg-login
 							use(href='./img/sprite.svg#svg-login')
 block variables

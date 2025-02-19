@@ -367,4 +367,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tabs-group").forEach((tabsGroup) => {
+      const tabButtons = tabsGroup.querySelectorAll("[data-tbat]");
+      const tabContents = tabsGroup.querySelectorAll("[data-tcontent]");
 
+      tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+              const target = button.getAttribute("data-tbat");
+
+              // Удаляем активный класс у всех вкладок
+              tabContents.forEach((content) => {
+                  content.classList.remove("active");
+              });
+
+              // Находим и добавляем активный класс к нужному контенту
+              const activeContent = tabsGroup.querySelector(`[data-tcontent="${target}"]`);
+              if (activeContent) {
+                  activeContent.classList.add("active");
+              }
+          });
+      });
+  });
+});

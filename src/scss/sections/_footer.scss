@@ -26,7 +26,7 @@
 			}
 			img+img{
 				margin-left: -24px;
-				@media (max-width: 424px) {
+				@media (max-width: 399px) {
 				margin-left: -34px
 				}
 			}
@@ -54,6 +54,8 @@ footer.footer{
 .footer.footer--white{
 	background-color: #fff;
 	color: $p;
+	border-top: 1px solid $s1;
+
 }
 .price-block{
 	white-space: nowrap;

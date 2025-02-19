@@ -115,7 +115,7 @@
 		height: 54px;
 		border-radius: 50%;
 		flex-shrink: 0;
-		border-bottom:1px solid $p;
+		border:1px solid $p;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -127,7 +127,7 @@
 	}
 	.dropdown__button::after{display: none;}
 	.dropdown__list{
-		
+		width: 95px;
 		background-color: #fff;
 		left: 50%;
 		transform: translate(-50%, 20px);

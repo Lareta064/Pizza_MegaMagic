@@ -4,7 +4,7 @@
 	.header-content{justify-content: center;text-align: center;position: relative;}
 	.header-title{
 		max-width: 250px; 
-		@media (max-width: 424px) {
+		@media (max-width: 399px) {
 		padding-left: 10px;
 		}
 	}
@@ -143,4 +143,8 @@
 		padding-top: 20px; 
 		// padding-bottom: 0;
 	}
+}
+.modal-frame-firstScreen{
+	position: relative;
+	z-index: 1;
 }

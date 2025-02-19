@@ -48,7 +48,7 @@
 }
 .profile-menu-body{
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 	width: 100%;
 	flex:1;
 	
@@ -59,12 +59,13 @@
 	}
 	.profile-menu{
 		max-height: calc(100vh - 125px - 85px - 200px);
+		max-height: calc(100vh - 125px - 85px - 120px);
 		overflow: hidden;
 		overflow-y: auto;
 		scrollbar-width: none;
 		&::-webkit-scrollbar{ display: none;}
 	}
-	@media (max-width: 424px) {
+	@media (max-width: 399px) {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		.container{row-gap:20px;}

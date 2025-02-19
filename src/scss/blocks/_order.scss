@@ -196,6 +196,7 @@
 .address-mode.switch-group{
 	.round-label{
 		width: 86px;
+		min-width: unset;
 	}
 	input[type="radio"]:checked + .round-label{background-color: $a2;}
 }
