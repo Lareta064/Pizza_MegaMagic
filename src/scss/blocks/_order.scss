@@ -152,6 +152,9 @@
 	border-color: $s;
 	background-color: #fff;
 }
+.round-label.round-label--accent{
+	background-color: $a2;
+}
 .order-history-card{
 	display: flex;
 	border: 1px solid $s;;

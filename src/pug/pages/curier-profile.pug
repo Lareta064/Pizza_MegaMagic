@@ -103,5 +103,82 @@ block content
 	//footer
 	footer.footer.footer--white
 		.container.flex-between
-			a(href="curier-orders.html").btn.flx-1 История заказов
-			a(href="curier-info.html").btn-accent.flx-1 Мой профиль
+			a(href="#!" data-btn="curier-history").btn.flx-1 История заказов
+			a(href="#!" data-btn="curier-info").btn-accent.flx-1 Мой профиль
+	
+	// POPUP CURIER HISTORY
+	.modal-frame.modal-frame--curier-history(data-modal="curier-history")
+		header.header
+			.container
+				.header-content
+					a(href="#!" data-close).btn-back
+					.h2-up История заказов
+		
+		.popup-body
+			.container.gap-12
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label.round-label--accent В работе
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label Доставлен
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label Доставлен
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+
+	// POPUP МОЙ ПРОФИЛЬ
+	.modal-frame.modal-frame--curier-info(data-modal="curier-info")
+		header.header
+			.container
+				.header-content
+					a(href="#!" btn-close).btn-back.btn-round
+					.h2-up Мой профиль
+		
+		main.main
+			.container
+				.curier-profile.gap-20
+					.h5 Основная информация
+					.curier-profile-content
+						.form-item
+							label.label.h10.txt-s5 Имя
+							input(type="text" value="johndue" name="name" readonly)
+						.form-item
+							label.label.h10.txt-s5 Номер мобильного
+							input(type="text"   value="j9898989898" name="phone" readonly)
+						.form-item
+							label.label.h10.txt-s5 Электронная почта
+							input(type="email"  value="jadmin@ya.ru" name="email" readonly)
+						.form-item
+							label.label.h10.txt-s5 Номер автомобиля
+							input(type="text"  value="12345" name="auto_nubber" readonly)
+						.form-item
+							label.label.h10.txt-s5 Тип машины
+							input(type="text"  value="Седан" name="auto_type" readonly)
+					

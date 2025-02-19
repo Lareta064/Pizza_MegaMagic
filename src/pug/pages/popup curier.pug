@@ -1,0 +1,23 @@
+extends ../layouts/layout.pug
+
+block content
+	.popup-wrapper
+		.popup-small
+			.h3 Принять заказ
+			.h11 Вы уверенны, что выбрали этот заказ?
+			.flex-center
+				a(href="#!").btn-light Нет
+				a(href="#!").btn-accent Да
+		
+		.popup-small
+			.h3 Успешно
+			.h11 Заказ вами принят успешно!
+			.flex-center
+				a(href="#!").btn-accent Хорошо
+		
+		.popup-small
+			.h3 Вы уверенны, что пометите этот заказ, как доставленный?
+				
+			.flex-center
+				a(href="#!").btn-light Нет
+				a(href="#!").btn-accent Да
