@@ -143,7 +143,9 @@
 	background-color: $s2;
 	border:1px solid $s2;
 	text-align: center;
-	width: 137px;
+	min-width: 137px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .round-label.round-label--outline{
 	color: $s5;

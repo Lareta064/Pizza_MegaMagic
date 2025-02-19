@@ -49,12 +49,23 @@ span.check-icon{
 	flex-shrink: 0;
 	color: #ffdd9a;
 }
-.svg-plus, .svg-note {
+.svg-plus, .svg-note, .svg-check {
 	width: 20px;
 	height: 20px;
+}
+.svg-check{
+	display: block;
+	color: #D7001A;
 }
 .svg-alarm,.svg-flag, .svg-assig, .svg-trolley{
 	width: 29px;
 	height: 29px;
 	color: #BFBFBF;
 }
+.svg-pin,.svg-phone{
+	display: block;
+	color: #2c2c2c;
+	width: 28px;
+	height: 28px;
+}
+.svg-pin{width: 22px;}

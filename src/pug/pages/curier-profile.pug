@@ -1,0 +1,107 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header
+		.container
+			.header-content
+				.h2-up Курьером
+		
+	//BODY
+	.profile-menu-body
+		.container
+			.profile-header
+				.profile-header__avatar
+					img(src="./img/profile.webp",  srcset="./img/profile@2x.webp 2x" alt="avatar")
+				.profile-header__text
+					.h5 johndue
+					p.txt-grey Курьером
+				.profile-header__btn
+					button.btn-out
+						svg.svg-out
+							use(href='./img/sprite.svg#svg-out')
+			.wrapper-gap-20
+				.content-group.gap-12
+					.h11 Установите свое присутствие:
+					.switch-group.profile-state-switch
+						label.switch-label#current-orders-show
+							input(type="radio" name="switch_status" checked)
+							span.switch-btn
+								svg.svg-check
+									use(href='./img/sprite.svg#svg-check')
+					
+						label.switch-label
+							input(type="radio" name="switch_status")
+							span.switch-btn
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
+				
+				.content-group.gap-12
+					.h11 Заказы в работе:
+					
+					.current-orders-wrapper.gap-12
+						a(href="single-order-curier.html").current-order
+							.order-history-card
+								.card-col
+									p.txt-16 #[strong Заказ №:] 1003
+									.h3 1675&nbsp;&#8381;
+								.card-col
+									.round-label 27.01.2025 13:19
+									.round-label.round-label--outline Подготовка
+							.current-order-row
+								.title-16 По адресу:
+								.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+							
+						a(href="single-order-curier.html").current-order
+							.order-history-card
+								.card-col
+									p.txt-16 #[strong Заказ №:] 1003
+									.h3 1675&nbsp;&#8381;
+								.card-col
+									.round-label 27.01.2025 13:19
+									.round-label.round-label--outline Подготовка
+							.current-order-row
+								.title-16 По адресу:
+								.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+							
+						a(href="single-order-curier.html").current-order
+							.order-history-card
+								.card-col
+									p.txt-16 #[strong Заказ №:] 1003
+									.h3 1675&nbsp;&#8381;
+								.card-col
+									.round-label 27.01.2025 13:19
+									.round-label.round-label--outline Подготовка
+							.current-order-row
+								.title-16 По адресу:
+								.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+							
+						a(href="single-order-curier.html").current-order
+							.order-history-card
+								.card-col
+									p.txt-16 #[strong Заказ №:] 1003
+									.h3 1675&nbsp;&#8381;
+								.card-col
+									.round-label 27.01.2025 13:19
+									.round-label.round-label--outline Подготовка
+							.current-order-row
+								.title-16 По адресу:
+								.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+							
+						a(href="single-order-curier.html").current-order
+							.order-history-card
+								.card-col
+									p.txt-16 #[strong Заказ №:] 1003
+									.h3 1675&nbsp;&#8381;
+								.card-col
+									.round-label 27.01.2025 13:19
+									.round-label.round-label--outline Подготовка
+							.current-order-row
+								.title-16 По адресу:
+								.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+	
+	//footer
+	footer.footer.footer--white
+		.container.flex-between
+			a(href="curier-orders.html").btn.flx-1 История заказов
+			a(href="curier-info.html").btn-accent.flx-1 Мой профиль

@@ -4,3 +4,36 @@ width: 140px;
 height: 128px;
 display: block;
 }
+.current-order{
+	padding: 20px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid $s;
+	border-radius: 16px;
+	row-gap:10px;
+	&>*{width: 100%;}
+	.order-history-card{border:0; padding: 0;}
+}
+.switch-group .switch-btn svg{
+	width: 16px;
+	height: 16px;
+	color: $p;
+
+}
+.switch-btn svg.svg-check{width: 24px; height: 24px;}
+.switch-group input[type="radio"]:checked +.switch-btn svg{
+	color: #D7001A;
+}
+.round-link{
+
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	background-color: $a2;
+	svg, img{width: 28px;height: 28px;}
+	&.round-link--accent{
+		background-color: $a1;
+		svg{color: white;}
+	}
+}

@@ -6,13 +6,13 @@ block content
 		.container
 			.header-content
 				a(href="profile-login.html").btn-back.btn-round
-				.h2-up Войти
+				.h2-up Логин курьера
 	
 	main.autorization
 		.autorization-head.bg-grey
 			.logo-block
-				svg.svg-logo
-					use(href='./img/sprite.svg#svg-logo')
+				svg.svg-curier-logo
+					use(href='./img/curier.svg#svg-curier-logo')
 		
 		.form-wrapper
 			.container
@@ -23,14 +23,6 @@ block content
 						input(type="password" placeholder="Пароль" name="pass")
 					
 					.form-btn.column-center
-						a(href="#!").flex-link
-							span Сбросить пароль
-							svg.svg-reload
-								use(href='./img/sprite.svg#svg-reload')
+						
 						button.btn-accent.w-100(type="submit") Войти
-	//FOOTER
-	footer.footer
-		.container
-			.footer-content.flex-center
-				.h11 Нет аккаунта?
-				a.h11.txt-s3(href="registr.html") Зарегистрируйтесь сейчас
+	
