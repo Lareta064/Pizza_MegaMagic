@@ -72,7 +72,7 @@ html(lang="ru")
 									input.dropdown__input-hidden(type="hidden", name="lang")
 								
 								//PROFILE BTN
-								button.btn-profile
+								a(href="index.html").btn-profile
 									img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" alt="img")
 		
 				hr
@@ -110,17 +110,10 @@ html(lang="ru")
 									use(href='../img/sprite.svg#svg-explore')
 		
 		
+		
+		
 		script.
-			/*=====CUSTOM SELECT===== */
 			
-			//- if (window.NodeList && !NodeList.prototype.forEach) {
-			//- 	NodeList.prototype.forEach = function (callback, thisArg) {
-			//- 		thisArg = thisArg || window;
-			//- 		for (var i = 0; i < this.length; i++) {
-			//- 		callback.call(thisArg, this[i], i, this);
-			//- 		}
-			//- 	};
-			//- }
 
 			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 				const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');

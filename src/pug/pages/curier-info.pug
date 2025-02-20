@@ -1,0 +1,31 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header
+		.container
+			.header-content
+				a(href="profile-login.html").btn-back.btn-round
+				.h2-up Мой профиль
+	
+	main.main
+		.container
+			.curier-profile.gap-20
+				.h5 Основная информация
+				.curier-profile-content
+					.form-item
+						label.label.h10.txt-s5 Имя
+						input(type="text" value="johndue" name="name" readonly)
+					.form-item
+						label.label.h10.txt-s5 Номер мобильного
+						input(type="text"   value="j9898989898" name="phone" readonly)
+					.form-item
+						label.label.h10.txt-s5 Электронная почта
+						input(type="email"  value="jadmin@ya.ru" name="email" readonly)
+					.form-item
+						label.label.h10.txt-s5 Номер автомобиля
+						input(type="text"  value="12345" name="auto_nubber" readonly)
+					.form-item
+						label.label.h10.txt-s5 Тип машины
+						input(type="text"  value="Седан" name="auto_type" readonly)
+					

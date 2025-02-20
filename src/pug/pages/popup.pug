@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	.popup-wrapper
+		.popup-small
+			.h3 Выйти
+			.h11 Вы уверенны, что хотите выйти?
+			.flex-center
+				a(href="#!").btn-light Нет
+				a(href="#!").btn-accent Да
+		
+		.popup-small
+			.h3 Выполнено
+			.h11 Ваш заказ успешно размещен. Хотите отследить прогресс заказа?
+			.flex-center
+				a(href="#!").btn-light Нет
+				a(href="#!").btn-accent Да
+		
+		.popup-small
+			.h3 Обработка
+				
+			svg.progress-ring(width='80' height='80' viewBox='0 0 80 80')
+				circle(cx='40' cy='40' r='30' stroke='white' stroke-width='4' fill='none')
+				circle.progress-ring-circle(cx='40' cy='40' r='30' stroke='#D7001A' stroke-width='4' fill='none' stroke-dasharray='188.4' stroke-dashoffset='188.4' stroke-linecap='round')

@@ -14,7 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
         clickable: true,
       },
     });
-    
+   
+		const mySwiper = new Swiper('.mySwiper',{
+			slidesPerView: 'auto',
+			spaceBetween: 20,
+      pagination: {
+        el: document.querySelector('#mySwiper-pagination'),
+        type: "fraction",
+      },
+		});
     /*COUNTER */
     const counters = document.querySelectorAll('.counter');
     // Перебираем каждый блок счетчика
@@ -116,20 +124,38 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+    /*DELIVERY HIDE FIELDS */
+    const deliverySwitch = document.querySelector('#switch-delivery');
+    if(deliverySwitch){
+      deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
+      deliverySwitchLabels.forEach((swtch)=>{
 
+        swtch.addEventListener('click', ()=>{
+         
+          const thisInputRadio = swtch.querySelector('[type="radio"]');
+          const hideDeliveryFields = document.querySelector('#delivery-courier-fields');
+          if(swtch.classList.contains('delivery-courier')){
+            if(thisInputRadio.checked){hideDeliveryFields.classList.add('filds-visible')}
+          }else{
+            hideDeliveryFields.classList.remove('filds-visible')
+          }
+        });
+      });
+    }
     // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
-    
+
+   
     if( modalFrames.length > 0){
       const modalFramesClose = document.querySelectorAll('[data-close]');
 
     for(let item of modalOpen){
       item.addEventListener('click', function(e){
-        for(let item of  modalFrames){
-          item.classList.remove('visible');
-          bodyEl.classList.remove('lock');
-        }
+        // for(let item of  modalFrames){
+        //   item.classList.remove('visible');
+        //   bodyEl.classList.remove('lock');
+        // }
         e.preventDefault();
         const itemAttr = item.getAttribute('data-btn');
 
@@ -143,17 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
-    
-    /*=============== закрыть модалки по клику вне ===============*/
-      // for(let frame of modalFrames){
-      //   frame.addEventListener('click', function(e){
-      //     if(e.target === e.currentTarget){
-      //       this.classList.remove(`visible`);
-      //       bodyEl.classList.remove('lock');
-      //     }
-      //   });
-      // }
-
+   
       if(modalFramesClose){
         modalFramesClose.forEach((closeItem)=>{
           closeItem.addEventListener('click', ()=>{
@@ -164,6 +180,36 @@ document.addEventListener("DOMContentLoaded", function () {
         
       }
     }
+    // SHOW ADD PRODUCTS POPUP
+    const showAddProducts = document.querySelector('#show-addProducts');
+    const addProductsModal = document.querySelector('#addProducts');
+    const closeAddProductsModal = document.querySelector('#close-addProducts');
+    if(showAddProducts){
+
+      showAddProducts.addEventListener('click', ()=>{
+        addProductsModal.classList.add('visible');
+      });
+      closeAddProductsModal.addEventListener('click', ()=>{
+        addProductsModal.classList.remove('visible');
+      });
+
+    }
+    /*btn RESET*/
+    const hasResetInput = document.querySelectorAll('.has-reset');
+    if(hasResetInput.length > 0){
+      hasResetInput.forEach((el)=>{
+        const resetBtn = el.querySelector('.btn-reset');
+        if( resetBtn){
+          resetBtn.addEventListener('click',()=>{
+            const inputItem =el.querySelector('INPUT');
+            const textItem = el.querySelector('.address-field')
+            if(textItem){ textItem.innerHTML ='';}
+            if(inputItem){ nputItem.value ='';}
+          });
+        }
+      });
+    }
+   
     /*PIZZA SIZE */
     const sizeToggleWrapper = document.querySelector('.switch-group--size');
     if(sizeToggleWrapper){
@@ -254,10 +300,93 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 });
-// активируем checked  у свитч по загрузке
+
+// SWIPE CART ITEM
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".switch-group input:checked").forEach((input) => {
-    console.log('123');
-      input.dispatchEvent(new Event("change"));
+  const cartItems = document.querySelectorAll(".cart-item-group");
+
+  cartItems.forEach((itemGroup) => {
+      let startX = 0;
+      let currentX = 0;
+      let isSwiped = false;
+      const swipeThreshold = 50; // Минимальная дистанция свайпа
+
+      itemGroup.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isSwiped = itemGroup.classList.contains("swiped");
+      });
+
+      itemGroup.addEventListener("touchmove", (e) => {
+          currentX = e.touches[0].clientX;
+      });
+
+      itemGroup.addEventListener("touchend", () => {
+          const diffX = startX - currentX;
+
+          if (diffX > swipeThreshold) {
+              // Свайп влево — показываем кнопку
+              itemGroup.classList.add("swiped");
+          } else if (diffX < -swipeThreshold) {
+              // Свайп вправо — возвращаем обратно
+              itemGroup.classList.remove("swiped");
+          }
+      });
+  });
+  /* Рекомендуемые товары ценв/счетчик */
+  const recommendGoodsBtn = document.querySelectorAll('.recommend-card__btn');
+  if(recommendGoodsBtn.length > 0){
+    recommendGoodsBtn.forEach((item)=>{
+      const priceItem = item.querySelector('.btn-light.active');
+      const priceCounter = item.querySelector('.counter');
+      priceItem.addEventListener('click', ()=>{
+        priceItem.classList.remove('active');
+        priceCounter.classList.add('active');
+      });
+    });
+  }
+});
+  /*ROUND PROGRESS */
+ 
+	document.addEventListener("DOMContentLoaded", function () {
+    const circle = document.querySelector(".progress-ring-circle");
+    if(circle){
+
+      const duration = 5; // Время в секундах
+      const circumference = 2 * Math.PI * 30; // Длина окружности
+      let progress = 0;
+      const interval = setInterval(() => {
+          progress += 100 / duration; // Увеличиваем процент
+          const offset = circumference - (progress / 100) * circumference;
+          circle.style.strokeDashoffset = offset;
+          // progressText.textContent = `Заполнено: ${Math.round(progress)}%`;
+  
+          if (progress >= 100) {
+              clearInterval(interval);
+          }
+      }, 1000);
+
+    }
+});
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".tabs-group").forEach((tabsGroup) => {
+      const tabButtons = tabsGroup.querySelectorAll("[data-tbat]");
+      const tabContents = tabsGroup.querySelectorAll("[data-tcontent]");
+
+      tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+              const target = button.getAttribute("data-tbat");
+
+              // Удаляем активный класс у всех вкладок
+              tabContents.forEach((content) => {
+                  content.classList.remove("active");
+              });
+
+              // Находим и добавляем активный класс к нужному контенту
+              const activeContent = tabsGroup.querySelector(`[data-tcontent="${target}"]`);
+              if (activeContent) {
+                  activeContent.classList.add("active");
+              }
+          });
+      });
   });
 });

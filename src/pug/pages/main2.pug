@@ -21,8 +21,8 @@ block content
 						input.dropdown__input-hidden(type="hidden", name="lang")
 					
 					//PROFILE BTN
-					button.btn-profile
-						img(src="../img/profile.webp", srcset="../img/profile@2x.webp 2x" width="66" height="66"  alt="img")
+					a(href="index.html").btn-profile
+						img(src="./img/profile.webp", srcset="./img/profile@2x.webp 2x" width="66" height="66"  alt="img")
 	//MAIN
 	main.main
 		.container
@@ -43,14 +43,14 @@ block content
 				sectiion.products
 					//categories
 					.cat-wrapper.two-columns
-						+catCard-flex-ui(1,'Пицца')
-						+catCard-flex-ui(2,'Роллы')
-						+catCard-flex-ui(3,'Бургеры')
-						+catCard-flex-ui(4,'Закуски')
-						+catCard-flex-ui(5,'Напитки')
-						+catCard-flex-ui(6,'Десерты')
-						+catCard-flex-ui(7,'Салаты')
-						+catCard-flex-ui(8,'Наборы')
+						+catCard-flex(1,'Пицца')
+						+catCard-flex(2,'Роллы')
+						+catCard-flex(3,'Бургеры')
+						+catCard-flex(4,'Закуски')
+						+catCard-flex(5,'Напитки')
+						+catCard-flex(6,'Десерты')
+						+catCard-flex(7,'Салаты')
+						+catCard-flex(8,'Наборы')
 	
 	//FOOTER
 	footer.footer
@@ -59,9 +59,9 @@ block content
 				p.h11 Корзина
 				.cart-preview
 					.cart-preview__img
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
-						img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" alt="img")
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
+						img(src="./img/goods/pizza1.webp", srcset="./img/goods/pizza1@2x.webp 2x" alt="img")
 						
 					.cart-preview__count.flex-center
 						span.h11 7
@@ -81,46 +81,46 @@ block content
 			.container
 				.profile-header
 					.profile-header__avatar
-						img(src="../img/profile.webp",  srcset="../img/profile@2x.webp 2x" alt="avatar")
+						img(src="./img/profile.webp",  srcset="./img/profile@2x.webp 2x" alt="avatar")
 					.profile-header__text
 						.h5 Войти
 						p.txt-grey Профиль
 					.profile-header__btn
 						button.btn-out
 							svg.svg-out
-								use(href='../img/sprite.svg#svg-out')
+								use(href='./img/sprite.svg#svg-out')
 			
 				.profile-menu
 					.li
 						svg.li-icon.svg-menu
-							use(href='../img/sprite.svg#svg-menu')
+							use(href='./img/sprite.svg#svg-menu')
 						.h8 Меню
 					.li
 						svg.li-icon.svg-cart
-							use(href='../img/sprite.svg#svg-cart')
+							use(href='./img/sprite.svg#svg-cart')
 						.h8 Корзина
 						span.notify-item 0
 					.li
 						svg.li-icon.svg-list
-							use(href='../img/sprite.svg#svg-list')
+							use(href='./img/sprite.svg#svg-list')
 						.h8 История заказа
 						span.notify-item 0
 					.li
 						svg.li-icon.svg-star
-							use(href='../img/sprite.svg#svg-star')
+							use(href='./img/sprite.svg#svg-star')
 						.h8 Избранное
 						span.notify-item 0
 					.li
 						svg.li-icon.svg-discount
-							use(href='../img/sprite.svg#svg-discount')
+							use(href='./img/sprite.svg#svg-discount')
 						.h8 Бонусы
 					.li
 						svg.li-icon.svg-info
-							use(href='../img/sprite.svg#svg-info')
+							use(href='./img/sprite.svg#svg-info')
 						.h8 О нас
 					.li
 						svg.li-icon.svg-doc
-							use(href='../img/sprite.svg#svg-doc')
+							use(href='./img/sprite.svg#svg-doc')
 						.h8 Наша политика
 					
 					
@@ -128,8 +128,8 @@ block content
 		.footer
 			.container
 				.footer-content.flex-center
-					a.h11.txt-s3.flex(href="#!") Войти как курьер
+					a.h11.txt-s3.flex(href="curier-autorize.html") Войти как курьер
 						svg.svg-login
-							use(href='../img/sprite.svg#svg-login')
+							use(href='./img/sprite.svg#svg-login')
 block variables
 	-var title = "Pizza Mega Magic";

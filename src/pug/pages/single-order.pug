@@ -1,0 +1,106 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//HEADER
+	header.header
+		.container
+			.header-content
+				a(href="order-page.html").btn-back
+				.h2-up Заказ № 1001
+				
+	//MAIN
+	main.main.bg-grey
+		.container.gap-20
+			//STEPS
+			.order-steps
+				.step-item-wrapper.step-done
+					.step-item
+						.step-icon
+							svg.svg-assig
+								use(href='../img/sprite.svg#svg-assig')
+						.txt-12 Оформлен
+				.step-item-wrapper
+					.step-item
+						.step-icon
+							svg.svg-alarm
+								use(href='../img/sprite.svg#svg-alarm')
+						.txt-12 Подготовка
+				.step-item-wrapper
+					.step-item
+						.step-icon
+							svg.svg-trolley
+								use(href='../img/sprite.svg#svg-trolley')
+						.txt-12 Отправка
+				.step-item-wrapper
+					.step-item
+						.step-icon
+							svg.svg-flag
+								use(href='../img/sprite.svg#svg-flag')
+						.txt-12 Доставлен
+
+			//CARD
+			.order-card.order-card-done
+				.order-header
+					p.h5 Сумма заказа
+					p.h5 1675&nbsp;&#8381;
+				.order-body
+					ul.order-info-list
+						li
+							p 
+								strong Оформлен:
+							p 27.01.2025 в 13:19
+						li
+							p 
+								strong Получатель:
+							p Ульяна, +7 965 473 53 44
+						li
+							p 
+								strong По адресу:
+							p г. Название города, ул. Название улицы, дом. 23, кв. 15
+						li
+							p 
+								strong Доставка (бесплатная от 500 ₽):
+							p 0&nbsp;&#8381;
+						li
+							p 
+								strong Оплата:
+							p Наличными
+			.content-group.gap-12
+				.h5 Состав заказа:
+				.order-set.gap-12
+					.order-card.order-set-card
+						.order-header
+							p.h11 Пицца Особая
+							p.h11 365&nbsp;&#8381;
+						.order-body
+							.txt-14 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+							.txt-12.txt-s4 Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+					.order-card.order-set-card
+						.order-header
+							p.h11 Пицца “Маргарита”
+							p.h11 635&nbsp;&#8381;
+						.order-body
+							.txt-14 Моцарелла, помидоры, томатный соус, орегано.
+							
+					.order-card.order-set-card
+						.order-header
+							p.h11 Пицца “Карбонара”
+							p.h11 800&nbsp;&#8381;
+						.order-body
+							.txt-14 Бекон, моцарелла, грана падано, яйцо куриное, сливки.
+							
+					.order-card.order-set-card
+						.order-header
+							p.h11 Пицца Гавайская
+							p.h11 365&nbsp;&#8381;
+						.order-body
+							.txt-14 Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					
+					.order-card.order-set-card
+						.order-header
+							p.h11 Чикен бокс
+							p.h11 365&nbsp;&#8381;
+						.order-body
+							.txt-14 Куриные наггетсы, Картофель фри, Соус Сырный
+							

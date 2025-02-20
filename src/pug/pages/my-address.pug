@@ -1,0 +1,86 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//HEADER
+	header.header
+		.container
+			.header-content
+				a(href="order-page.html").btn-back
+				.h2-up Мои адреса
+				
+	//MAIN
+	main.main
+		.container
+			.wrapper-gap-20
+				a(href="#!" data-btn="add-address").btn-light.w-100
+					span Добавить адрес
+					svg.svg-plus
+						use(href='./img/sprite.svg#svg-plus')
+
+				.my-address-wrapper.gap-12
+					.address-card
+						.card-img
+							img(src="./img/icons/home.webp", width="24" height="24" alt="img")
+						.address-txt
+							.h11 Дом
+							p.txt-12.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+						.address-remove
+							svg.svg-delete
+								use(href='./img/sprite.svg#svg-delete')
+					.address-card
+						.card-img
+							img(src="./img/icons/real.webp", width="24" height="24" alt="img")
+						.address-txt
+							.h11 Работа
+							p.txt-12.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+						.address-remove
+							svg.svg-delete
+								use(href='./img/sprite.svg#svg-delete')
+
+	//popUp select address
+	.modal-frame.modal-frame--add-address.visible(data-modal="add-address")
+		header.header
+			.container
+				.header-content.header-content--justify
+					button.btn-back-dark(data-close)
+						
+					button.btn-rounde
+						svg.svg-explore
+							use(href='../img/sprite.svg#svg-explore')
+		.modal-address-content
+			.address-map
+				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3Af2d88298ed4bfd3e6aba321e8ee888530b9c2fe516178912c6b2381c0435a527&amp;source=constructor" width="100%" height="100%" frameborder="0")
+			
+			.address-form-wrapper.pb-140
+				.container
+					form.address-form.gap-20
+						.form-item.form-item--address.has-reset
+							p.address-field(name="add_address" contenteditable) г. Название города, ул. Название улицы, дом. 23, кв. 15
+							button.btn-reset(type="reset")
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
+						.form-item
+							textarea(name="add_address" placeholder="Этаж / Квартира / Код домофона")
+					
+						.content-group.gap-12
+							p.txt-16 Сохранить адрес как
+							
+							.address-mode.switch-group
+								label.switch-label
+									input(type="radio" name="address_mode" checked)
+									span.round-label Дом
+								label.switch-label
+									input(type="radio" name="address_mode")
+									span.round-label Работа
+								label.switch-label
+									input(type="radio" name="address_mode" )
+									span.round-label Офис
+								label.switch-label
+									input(type="radio" name="address_mode")
+									span.round-label Другой
+
+		//FOOTER
+		footer.footer.footer--white
+			.container
+				a(href="#!" data-close).btn-accent.w-100 Добавить адрес

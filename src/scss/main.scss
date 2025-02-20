@@ -10,8 +10,15 @@
 @use "blocks/_main-slider";
 
 @use "blocks/_cards";
+@use "blocks/_cart-item";
+@use "blocks/_recommend";
+
+
 @use "blocks/_switch-group";
 @use "blocks/_counter";
+@use "blocks/_swiper-slide";
+@use "blocks/_order";
+
 
 
 
@@ -21,9 +28,16 @@
 
 @use "sections/_autoriz.scss";
 @use "sections/_categories";
+@use "sections/_address";
+
 
 @use "sections/_products-main-page.scss";
 @use "sections/_product-popup";
+
+
+
+@use "sections/_curier";
+
 @use "sections/_footer";
 
 

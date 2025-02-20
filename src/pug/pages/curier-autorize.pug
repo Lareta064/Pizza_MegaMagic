@@ -1,0 +1,28 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header.header--autorize
+		.container
+			.header-content
+				a(href="index.html").btn-back.btn-round
+				.h2-up Логин курьера
+	
+	main.autorization
+		.autorization-head.bg-grey
+			.logo-block
+				svg.svg-curier-logo
+					use(href='./img/curier.svg#svg-curier-logo')
+		
+		.form-wrapper
+			.container
+				form(action="#!" method="method")
+					.form-item
+						input(type="text" placeholder="Укажите мобильный телефон" name="phone")
+					.form-item
+						input(type="password" placeholder="Пароль" name="pass")
+					
+					.form-btn.column-center
+						
+						button.btn-accent.w-100(type="submit") Войти
+	

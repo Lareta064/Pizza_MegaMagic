@@ -1,0 +1,188 @@
+extends ../layouts/layout.pug
+
+block content
+	//HEADER
+	header.header
+		.container
+			.header-content
+				.h2-up Курьером
+		
+	//BODY
+	.profile-menu-body.pb-140
+		.container
+			.profile-header
+				.profile-header__avatar
+					img(src="./img/profile.webp",  srcset="./img/profile@2x.webp 2x" alt="avatar")
+				.profile-header__text
+					.h5 johndue
+					p.txt-grey Курьером
+				.profile-header__btn
+					button.btn-out
+						svg.svg-out
+							use(href='./img/sprite.svg#svg-out')
+			.wrapper-gap-20.tabs-group
+				.content-group.gap-12
+					.h11 Установите свое присутствие:
+					.switch-group.profile-state-switch
+						label.switch-label(data-tbat="1")
+							input(type="radio" name="switch_status" checked)
+							span.switch-btn
+								svg.svg-check
+									use(href='./img/sprite.svg#svg-check')
+					
+						label.switch-label(data-tbat="2")
+							input(type="radio" name="switch_status")
+							span.switch-btn
+								svg.svg-cross
+									use(href='./img/sprite.svg#svg-cross')
+				
+				.content-group.gap-12
+					.h11 Заказы в работе:
+					//отображается при переключение свитча на положение Галочка
+					.tabs-content.active(data-tcontent="1")
+						.current-orders-wrapper.gap-12
+							a(href="single-order-curier.html").current-order
+								.order-history-card
+									.card-col
+										p.txt-16 #[strong Заказ №:] 1003
+										.h3 1675&nbsp;&#8381;
+									.card-col
+										.round-label 27.01.2025 13:19
+										.round-label.round-label--outline Подготовка
+								.current-order-row
+									.title-16 По адресу:
+									.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+								
+							a(href="single-order-curier.html").current-order
+								.order-history-card
+									.card-col
+										p.txt-16 #[strong Заказ №:] 1003
+										.h3 1675&nbsp;&#8381;
+									.card-col
+										.round-label 27.01.2025 13:19
+										.round-label.round-label--outline Подготовка
+								.current-order-row
+									.title-16 По адресу:
+									.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+								
+							a(href="single-order-curier.html").current-order
+								.order-history-card
+									.card-col
+										p.txt-16 #[strong Заказ №:] 1003
+										.h3 1675&nbsp;&#8381;
+									.card-col
+										.round-label 27.01.2025 13:19
+										.round-label.round-label--outline Подготовка
+								.current-order-row
+									.title-16 По адресу:
+									.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+								
+							a(href="single-order-curier.html").current-order
+								.order-history-card
+									.card-col
+										p.txt-16 #[strong Заказ №:] 1003
+										.h3 1675&nbsp;&#8381;
+									.card-col
+										.round-label 27.01.2025 13:19
+										.round-label.round-label--outline Подготовка
+								.current-order-row
+									.title-16 По адресу:
+									.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+								
+							a(href="single-order-curier.html").current-order
+								.order-history-card
+									.card-col
+										p.txt-16 #[strong Заказ №:] 1003
+										.h3 1675&nbsp;&#8381;
+									.card-col
+										.round-label 27.01.2025 13:19
+										.round-label.round-label--outline Подготовка
+								.current-order-row
+									.title-16 По адресу:
+									.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+					
+					//отображается при переключение свитча на положение Крестик
+					.tabs-content(data-tcontent="2")
+						.h11.s5 У вас еще нет заказов
+	//footer
+	footer.footer.footer--white
+		.container.flex-between
+			a(href="#!" data-btn="curier-history").btn.flx-1 История заказов
+			a(href="#!" data-btn="curier-info").btn-accent.flx-1 Мой профиль
+	
+	// POPUP CURIER HISTORY
+	.modal-frame.modal-frame--curier-history(data-modal="curier-history")
+		header.header
+			.container
+				.header-content
+					a(href="#!" data-close).btn-back
+					.h2-up История заказов
+		
+		.popup-body
+			.container.gap-12
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label.round-label--accent В работе
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label Доставлен
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+				
+				a(href="single-order-curier.html").current-order
+					.order-history-card
+						.card-col
+							p.txt-16 #[strong Заказ №:] 1003
+							.h3 1675&nbsp;&#8381;
+						.card-col
+							.round-label 27.01.2025 13:19
+							.round-label Доставлен
+					.current-order-row
+						.title-16 По адресу:
+						.txt-16.txt-s5 г. Название города, ул. Название улицы, дом. 23, кв. 15
+
+	// POPUP МОЙ ПРОФИЛЬ
+	.modal-frame.modal-frame--curier-info(data-modal="curier-info")
+		header.header
+			.container
+				.header-content
+					a(href="#!" btn-close).btn-back.btn-round
+					.h2-up Мой профиль
+		
+		main.main
+			.container
+				.curier-profile.gap-20
+					.h5 Основная информация
+					.curier-profile-content
+						.form-item
+							label.label.h10.txt-s5 Имя
+							input(type="text" value="johndue" name="name" readonly)
+						.form-item
+							label.label.h10.txt-s5 Номер мобильного
+							input(type="text"   value="j9898989898" name="phone" readonly)
+						.form-item
+							label.label.h10.txt-s5 Электронная почта
+							input(type="email"  value="jadmin@ya.ru" name="email" readonly)
+						.form-item
+							label.label.h10.txt-s5 Номер автомобиля
+							input(type="text"  value="12345" name="auto_nubber" readonly)
+						.form-item
+							label.label.h10.txt-s5 Тип машины
+							input(type="text"  value="Седан" name="auto_type" readonly)
+					
