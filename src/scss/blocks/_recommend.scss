@@ -16,7 +16,7 @@
 		height: 80px;
 		display: flex;
 		img{width: 100%;
-		height: 100%; object-fit: contain; align-self: center;}
+		height: 100%; object-fit: cover; align-self: center;}
 	}
 	.card-txt{
 		flex:1;
@@ -99,6 +99,7 @@
 	&::-webkit-scrollbar{display: none;}
 }
 .bonus-block{
+	padding-bottom: 40px;
 	.flex{
 		.form-item{flex:1;}
 		.txt-14{color: $s4;}
