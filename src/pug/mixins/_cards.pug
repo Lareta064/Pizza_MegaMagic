@@ -2,13 +2,13 @@ mixin catCard(img, title, link="#!")
 	
 	a(href=""+ link).cat-card
 		.card-img
-			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x"  alt="img")
+			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x" width="382"  height="238" alt="img")
 		.card-txt
 			p !{title}
 mixin catCard-ui(img, title, link="#!")
 	a(href=""+ link).cat-card
 		.card-img
-			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  alt="img")
+			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  width="382"  height="238" alt="img")
 		.card-txt
 			p !{title}
 mixin catCard-flex(img, title, link="#!")
